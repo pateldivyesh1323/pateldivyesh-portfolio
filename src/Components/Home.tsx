@@ -5,7 +5,7 @@ const Home = (): React.ReactElement => {
     return (
         <div className='flex items-center justify-center lg:justify-evenly p-8 box-border h-screen flex-wrap lg:mt-0 mt-16'>
             <div>
-                <img className='w-[250px] h-[250px] rounded-full border-4 border-[#86b9b0] shadow-[0_0_30px_2px_#86b9b0]' src="./src/assets/PatelDivyesh-square.jpg" alt="" />
+                <img className='w-[250px] h-[250px] rounded-full border-4 border-[#86b9b0] shadow-[0_0_30px_2px_#86b9b0]' src="./Images/PatelDivyesh-square.jpg" alt="" />
             </div>
             <div className='text-2xl font-bold'>
                 Hello, I'm
