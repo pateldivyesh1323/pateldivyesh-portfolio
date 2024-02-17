@@ -7,6 +7,7 @@ export default {
   theme: {
     fontFamily: {
       'mono': ['Roboto Mono', 'monospace'],
+      'poppins': ['Poppins', 'monospace']
     },
     extend: {},
   },

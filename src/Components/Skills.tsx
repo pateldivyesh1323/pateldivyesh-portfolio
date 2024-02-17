@@ -2,7 +2,7 @@ import React from 'react'
 
 const Skills = (): React.ReactElement => {
     return (
-        <div className='min-h-screen flex items-center justify-center flex-col gap-8'>
+        <div className='skills-component min-h-screen flex items-center justify-center flex-col gap-8'>
             <div className='font-bold text-lg underline'>
                 Skills
             </div>
