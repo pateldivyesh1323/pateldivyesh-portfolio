@@ -54,23 +54,26 @@ const Projects = (): React.ReactElement => {
     ]
 
     return (
-        <div className='projects-component min-h-screen flex items-center justify-center flex-col gap-8 mb-24'>
+        <div className='projects-component min-h-screen flex items-center justify-center flex-col gap-8 mt-12'>
             <div className='font-bold text-lg underline'>
                 Projects
             </div>
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-8'>
                 {projectsData.map((project, index) => {
                     return (
-                        <div key={index} className='bg-[#9DB2BF] rounded-md w-[400px]'>
-                            <img src={project.image} alt="" className='rounded-t-md w-[400px] h-[200px]' />
-                            <div className='mx-2 my-4'>
-                                <div className='text-black mb-2'>
-                                    <span className='text-black font-semibold'>{project.name}</span>
-                                    <a href={project.github} className='underline float-end'>Github </a>
-                                    <a href={project.link} className='underline float-end mr-2'>Live</a>
+                        <div key={index} className='rounded-md sm:w-[400px] w-[300px] hover:bg-neutral-200 hover:bg-opacity-10 transition-all duration-300'>
+                            <img src={project.image} alt="" className='rounded-md sm:h-[200px] h-[170px]' />
+                            <div className='text-white mx-2 my-4'>
+                                <div className='mb-2 flex items-center justify-between'>
+                                    <span className='font-semibold text-[#64add5]'>{project.name}</span>
+                                    <div className='text-sm lg:text-md'>
+                                        <a href={project.github} className='underline'>Github</a>
+                                        &nbsp;
+                                        <a href={project.link} className='underline mr-2'>Live</a>
+                                    </div>
                                 </div>
-                                <div className='font-semibold text-neutral-900 mb-4 text-xs'>{project.techStack}</div>
-                                <div className='text-neutral-900 text-sm'>{project.description}</div>
+                                <div className='font-semibold text-neutral-200 mb-4 text-xs'>{project.techStack}</div>
+                                <div className='text-neutral-200 text-sm'>{project.description}</div>
                             </div>
                         </div>
                     )

@@ -16,11 +16,11 @@ export default function Timeline() {
     ]
 
     return (
-        <div className="flex items-center justify-center flex-col gap-8 mb-16">
+        <div className="flex items-center justify-center flex-col gap-8 mx-8 mt-12 md:min-h-screen">
             <div className='font-bold text-lg underline'>
                 Timeline
             </div>
-            <table className="table-auto border border-spacing-2 border-collapse">
+            <table className="table-auto border border-spacing-2 border-collapse md:text-lg text-xs">
                 <thead>
                     <tr>
                         <th className="border p-4">Date</th>

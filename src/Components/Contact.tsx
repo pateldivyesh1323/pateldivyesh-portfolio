@@ -21,7 +21,7 @@ const Contact = (): React.ReactElement => {
                 },
                 body: JSON.stringify({ name, email, message, access_key: accessKey })
             })
-            toast.success("Message sent successfully!")
+            toast.success("I'll be in touch soon")
             setName("");
             setEmail("");
             setMessage("");
@@ -31,12 +31,12 @@ const Contact = (): React.ReactElement => {
     }
 
     return (
-        <div className='contact-component min-h-screen flex items-center justify-center flex-col gap-8'>
+        <div className='contact-component mt-12 mb-8 flex items-center justify-center flex-col gap-8 md:min-h-screen'>
             <div className='font-bold text-lg underline'>
                 Get in touch with me
             </div>
-            <div className='flex items-center flex-col'>
-                <form onSubmit={handleSubmit} className='w-[400px] bg-[#4c7273] p-8 mb-8 rounded-2xl flex items-center flex-col'>
+            <div className='flex items-center flex-col text-sm md:text-lg'>
+                <form onSubmit={handleSubmit} className='sm:w-[400px] bg-[#4c7273] p-4 md:p-8 mb-8 rounded-2xl flex items-center flex-col'>
                     <div className='mb-4'>
                         Send me a message
                     </div>
