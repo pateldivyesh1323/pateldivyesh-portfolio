@@ -7,6 +7,7 @@ import Skills from "./Components/Skills";
 import Timeline from "./Components/Timeline";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import Work from "./Components/Work";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <Analytics />
             <Toaster />
             <Home />
+            <Work />
             <Skills />
             <Projects />
             <Timeline />

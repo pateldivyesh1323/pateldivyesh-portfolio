@@ -18,7 +18,7 @@ const Home = (): React.ReactElement => {
                 </div>
                 <div className="sm:text-xl text-sm font-semibold max-w-[700px]">
                     <span className="text-[#86b9b0]">Full Stack Developer</span>{" "}
-                    based in Ahmedabad, India. Currently in the of my third year
+                    based in Ahmedabad, India. Currently in the of my final year
                     in Computer Engineering. When I'm not lost in lines of code,
                     you'll find me championing the beauty of{" "}
                     <span className="text-[#86b9b0]">Open Source</span>.
