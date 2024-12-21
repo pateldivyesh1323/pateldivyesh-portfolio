@@ -11,12 +11,12 @@ const Home = (): React.ReactElement => {
                     alt=""
                 />
             </div>
-            <div className="sm:text-2xl text-md font-bold">
+            <div className="sm:text-xl text-md font-bold">
                 Hello, I'm
                 <div className="divyesh-patel lg:text-8xl text-5xl mb-4 md:mb-8 font-semibold font-poppins">
                     Divyesh Patel
                 </div>
-                <div className="sm:text-xl text-sm font-semibold max-w-[700px]">
+                <div className="text-sm font-normal max-w-[700px]">
                     <span className="text-[#86b9b0]">Full Stack Developer</span>{" "}
                     based in Ahmedabad, India. Currently in the of my final year
                     in Computer Engineering. When I'm not lost in lines of code,

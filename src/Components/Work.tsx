@@ -6,7 +6,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 export default function Work() {
     return (
-        <div className="flex items-center justify-center flex-col min-h-screen gap-8 w-[90%] mx-auto">
+        <div className="flex items-center justify-center flex-col min-h-screen gap-8 w-[95%] mx-auto">
             <div className="font-bold text-lg underline">Work</div>
             <VerticalTimeline>
                 <VerticalTimelineElement
@@ -20,7 +20,7 @@ export default function Work() {
                     }}
                     date="March,2024 - August,2024"
                     iconStyle={{
-                        background: "rgb(33, 150, 243)",
+                        background: "#fff",
                         color: "#fff",
                     }}
                     icon={
@@ -48,7 +48,7 @@ export default function Work() {
                         color: "#fff",
                     }}
                     icon={
-                        <div className="flex items-center justify-center h-full text-4xl">
+                        <div className="flex items-center justify-center h-full text-2xl">
                             ⭐
                         </div>
                     }
