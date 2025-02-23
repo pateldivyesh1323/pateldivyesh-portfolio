@@ -1,59 +1,43 @@
-import {
-    VerticalTimeline,
-    VerticalTimelineElement,
-} from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+const experiences = [
+    {
+        role: "Software Engineer Intern",
+        company: "Caring Click",
+        location: "Ahmedabad, India",
+        duration: "March 2024 - August 2024",
+        description:
+            "Sole developer responsible for designing and implementing the company's website using Next.js and Firebase, ensuring alignment with best practices.",
+    },
+];
 
 export default function Work() {
     return (
-        <div className="flex items-center justify-center flex-col min-h-screen gap-8 w-[95%] mx-auto">
-            <div className="font-bold text-lg underline">Work</div>
-            <VerticalTimeline>
-                <VerticalTimelineElement
-                    className="vertical-timeline-element--work"
-                    contentStyle={{
-                        background: "#4c7273",
-                        color: "#fff",
-                    }}
-                    contentArrowStyle={{
-                        borderRight: "7px solid  rgb(33, 150, 243)",
-                    }}
-                    date="March,2024 - August,2024"
-                    iconStyle={{
-                        background: "#fff",
-                        color: "#fff",
-                    }}
-                    icon={
-                        <img
-                            src="/Images/caringclick.jpeg"
-                            className="rounded-full"
-                        />
-                    }
-                >
-                    <h3 className="vertical-timeline-element-title">
-                        Software Engineer Intern
-                    </h3>
-                    <h4 className="vertical-timeline-element-subtitle">
-                        Caring Click, Ahmedabad, India
-                    </h4>
-                    <p className="text-sm">
-                        Sole developer responsible for designing and
-                        implementing the company’s website using Next.js and
-                        Firebase, ensuring alignment with best practices.
-                    </p>
-                </VerticalTimelineElement>
-                <VerticalTimelineElement
-                    iconStyle={{
-                        background: "#fff",
-                        color: "#fff",
-                    }}
-                    icon={
-                        <div className="flex items-center justify-center h-full text-2xl">
-                            ⭐
+        <div className="flex items-center justify-center flex-col gap-4 my-8 md:my-12 px-4 md:px-0">
+            <h2 className="text-lg md:text-xl font-semibold">Work</h2>
+            <div className="w-full space-y-4 md:space-y-6">
+                {experiences.map((exp, index) => (
+                    <div
+                        key={index}
+                        className="border border-gray-700 rounded-lg p-4 md:p-6 hover:border-[#FFA500] transition-colors duration-300"
+                    >
+                        <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-0 mb-2">
+                            <div>
+                                <h3 className="text-[#FFA500] font-semibold text-base md:text-lg">
+                                    {exp.role}
+                                </h3>
+                                <p className="text-xs md:text-sm text-gray-300">
+                                    {exp.company} • {exp.location}
+                                </p>
+                            </div>
+                            <span className="text-xs md:text-sm text-gray-400 order-first md:order-none">
+                                {exp.duration}
+                            </span>
                         </div>
-                    }
-                />
-            </VerticalTimeline>
+                        <p className="text-xs md:text-sm text-gray-300 mt-3 md:mt-4 leading-relaxed">
+                            {exp.description}
+                        </p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 }
