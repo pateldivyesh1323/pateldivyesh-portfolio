@@ -57,7 +57,6 @@ const Contact = (): React.ReactElement => {
                         </a>
                         <div className="md:mt-4">
                             <Socials />
-                            
                         </div>
                     </div>
                 </div>
