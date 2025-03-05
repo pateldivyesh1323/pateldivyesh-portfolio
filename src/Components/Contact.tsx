@@ -40,10 +40,12 @@ const Contact = (): React.ReactElement => {
 
     return (
         <div className="flex items-center justify-center flex-col gap-6 md:gap-8 my-8 md:my-12 px-4 md:px-0">
-            <h2 className="text-lg md:text-xl font-semibold">Contact</h2>
+            <h2 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+                Contact
+            </h2>
             <div className="w-full flex flex-col md:flex-row items-start justify-between gap-6 md:gap-12">
                 <div className="w-full md:w-2/5 space-y-4 md:space-y-6">
-                    <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 text-xs md:text-sm leading-relaxed">
                         "I believe in creating software that not only works
                         flawlessly but also makes a positive impact. Let's
                         collaborate and build something amazing together."
@@ -51,7 +53,7 @@ const Contact = (): React.ReactElement => {
                     <div className="space-y-3 md:space-y-4">
                         <a
                             href="mailto:pateldivyesh1323@gmail.com"
-                            className="block text-xs md:text-sm text-gray-300 hover:text-[#FFA500] transition-colors duration-300"
+                            className="block text-xs md:text-sm text-gray-600 dark:text-gray-300 hover:text-[#FFA500] transition-colors duration-300"
                         >
                             pateldivyesh1323@gmail.com
                         </a>
@@ -72,7 +74,7 @@ const Contact = (): React.ReactElement => {
                             type="text"
                             name="name"
                             placeholder="Name"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-neutral-950 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
+                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
                         />
                         <input
                             value={email}
@@ -81,7 +83,7 @@ const Contact = (): React.ReactElement => {
                             type="email"
                             name="email"
                             placeholder="Email"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-neutral-950 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
+                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
                         />
                         <textarea
                             value={message}
@@ -90,7 +92,7 @@ const Contact = (): React.ReactElement => {
                             rows={4}
                             name="message"
                             placeholder="Message"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-neutral-950 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
+                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
                         />
                         <button
                             type="submit"

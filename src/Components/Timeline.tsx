@@ -21,21 +21,23 @@ const timeLine = [
 export default function Timeline() {
     return (
         <div className="flex items-center justify-center flex-col gap-4 my-8 md:my-12 px-4 md:px-0">
-            <div className="font-bold text-base md:text-lg">Timeline</div>
+            <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
+                Timeline
+            </div>
             <div className="w-full space-y-4">
                 {timeLine.map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col md:flex-row items-start gap-1 md:gap-4 p-3 rounded-lg border border-gray-700 hover:border-[#FFA500] transition-colors duration-300"
+                        className="flex flex-col md:flex-row items-start gap-1 md:gap-4 p-3 rounded-lg transition-colors duration-300 bg-white dark:bg-transparent bg-opacity-75"
                     >
-                        <div className="text-xs md:text-sm text-gray-400 mb-1 md:mb-0 md:pt-0.5">
+                        <div className="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-1 md:mb-0 md:pt-0.5">
                             {item.date}
                         </div>
                         <div>
                             <h3 className="text-[#FFA500] font-semibold text-sm md:text-base">
                                 {item.event}
                             </h3>
-                            <p className="text-xs md:text-sm text-gray-300 mt-0.5 leading-relaxed">
+                            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mt-0.5 leading-relaxed">
                                 {item.description}
                             </p>
                         </div>

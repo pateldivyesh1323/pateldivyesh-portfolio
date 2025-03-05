@@ -69,7 +69,7 @@ const projectsData = [
 
 const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => {
     return (
-        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-4 border border-gray-700 rounded-lg hover:border-[#FFA500] transition-all duration-300 group">
+        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-4 border border-gray-300 dark:border-gray-700 rounded-lg hover:border-[#FFA500] dark:hover:border-[#FFA500] transition-all duration-300 group bg-white dark:bg-transparent bg-opacity-75">
             <img
                 src={project.image}
                 alt={project.name}
@@ -83,7 +83,7 @@ const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => {
                     <div className="flex gap-4">
                         <a
                             href={project.github}
-                            className="flex items-center gap-2 hover:text-[#FFA500] transition-colors duration-300 text-sm"
+                            className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#FFA500] dark:hover:text-[#FFA500] transition-colors duration-300 text-sm"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => {
                         </a>
                         <a
                             href={project.link}
-                            className="flex items-center gap-2 hover:text-[#FFA500] transition-colors duration-300 text-sm"
+                            className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#FFA500] dark:hover:text-[#FFA500] transition-colors duration-300 text-sm"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -118,10 +118,10 @@ const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => {
                         </a>
                     </div>
                 </div>
-                <div className="font-semibold text-neutral-200 mb-2 text-[11px] md:text-xs">
+                <div className="font-semibold text-gray-800 dark:text-neutral-200 mb-2 text-[11px] md:text-xs">
                     {project.techStack}
                 </div>
-                <div className="text-neutral-200 text-xs md:text-sm leading-relaxed">
+                <div className="text-gray-700 dark:text-neutral-200 text-xs md:text-sm leading-relaxed">
                     {project.description}
                 </div>
             </div>
@@ -132,7 +132,9 @@ const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => {
 const Projects = (): React.ReactElement => {
     return (
         <div className="flex items-center justify-center flex-col gap-6 md:gap-8 my-8 md:my-12 px-4 md:px-0">
-            <div className="font-bold text-base md:text-lg">Projects</div>
+            <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
+                Projects
+            </div>
             <div className="w-full space-y-3 md:space-y-4">
                 {projectsData.map((project) => (
                     <ProjectCard key={project.name} project={project} />

@@ -7,11 +7,14 @@
 * {
     margin: 0px;
     padding: 0px;
-    color: #eef3f9;
 }
 
 body {
-    background-color: #121212;
+    @apply bg-white text-gray-800;
+}
+
+.dark body {
+    @apply bg-[#121212] text-[#eef3f9];
 }
 
 body::-webkit-scrollbar {
@@ -19,10 +22,9 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #041421;
+    @apply bg-gray-200 dark:bg-[#041421];
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #ffa500;
-    border-radius: 5px;
+    @apply bg-[#ffa500] rounded-md;
 }
