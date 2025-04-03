@@ -1,81 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Project, projectsData } from "../data";
 
-const projectsData = [
-    {
-        name: "Submitly",
-        techStack: "ReactJS, TailwindCSS, RadixUI, MongoDB, NodeJS, ExpressJS",
-        description:
-            "Submitly is a seamless form submission solution that simplifies how users interact with your website. Without the need for a backend server, Submitly allows you to receive form submissions directly into your inbox.",
-        link: "https://submitlyforms.vercel.app",
-        github: "https://github.com/pateldivyesh1323/submitly",
-        image: "/Images/Projects/Submitly.png",
-    },
-    {
-        name: "Futflare",
-        techStack: "ReactJS, TailwindCSS, ShadcnUI, Auth0, Golang, MongoDB",
-        description:
-            "Futflare is a digital time capsule that lets you capture moments, memories, and media to be revealed at a future date of your choosing.",
-        github: "https://github.com/pateldivyesh1323/futflare",
-        image: "/Images/Projects/Futflare.png",
-    },
-    {
-        name: "Edittube",
-        techStack:
-            "React.JS, TailwindCSS, NodeJS, ExpressJs, MongoDB, Cloudinary, Auth0",
-        description:
-            "Upload vidoes directly from editor to your youtube channel saving your time and internet bandwidth.",
-        link: "https://edittube.vercel.app",
-        github: "https://github.com/InnoSource-Labs/edittube",
-        image: "/Images/Projects/Edittube.png",
-    },
-    {
-        name: "Mockinter",
-        techStack: "NextJS, TailwindCSS, MongoDB",
-        description:
-            "This platform helps in job seekers in preparing for their upcoming interview. Mockinter connects interviewer and interviewee on the basis of their role they are seeking and give mock interviews.",
-        link: "https://mockinter.vercel.app",
-        github: "https://github.com/pateldivyesh1323/mockinter",
-        image: "/Images/Projects/Mockinter.png",
-    },
-    {
-        name: "Passvault",
-        techStack: "ReactJS, TailwindCSS, MongoDB, Auth0, NodeJs, ExpressJS",
-        description:
-            "A password manager with both client and server side encryption. Save and encrypt your password with your own key.",
-        link: "https://passvault.vercel.app",
-        github: "https://github.com/pateldivyesh1323/passvault",
-        image: "/Images/Projects/Passvault.png",
-    },
-    {
-        name: "Enjoymovies",
-        techStack: "React.JS",
-        description:
-            "Get all information about favourite upcoming, trending and popular movies all gathered in one place. You can also search for your favourite movies. Powered by TMBD API.",
-        link: "https://enjoymovies.netlify.app",
-        github: "https://github.com/pateldivyesh1323/enjoymovies",
-        image: "/Images/Projects/Enjoymovies.png",
-    },
-    {
-        name: "Heatlevels",
-        techStack: "React.JS",
-        description:
-            "Weather website powered by openweathermap api. Search weather based on your location or any city along with weather forecast.",
-        link: "https://heatlevels.netlify.app",
-        github: "https://github.com/pateldivyesh1323/heatlevels",
-        image: "/Images/Projects/Heatlevels.png",
-    },
-    {
-        name: "Wonders of world",
-        techStack: "HTML, CSS, Javascript",
-        description:
-            "Get all information about new seven wonders of world gathered in one place.",
-        link: "https://wondersof-world.web.app/",
-        github: "https://github.com/pateldivyesh1323/Wonders-of-World",
-        image: "/Images/Projects/Wondersofworld.png",
-    },
-];
-
-const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => {
+export const ProjectCard = ({ project }: { project: Project }) => {
     return (
         <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-4 border border-gray-300 dark:border-gray-700 rounded-lg hover:border-[#FFA500] dark:hover:border-[#FFA500] transition-all duration-300 group bg-white dark:bg-transparent bg-opacity-75">
             <img
@@ -142,16 +69,39 @@ const ProjectCard = ({ project }: { project: (typeof projectsData)[0] }) => {
 };
 
 const Projects = (): React.ReactElement => {
+    // Show only the first 3 projects
+    const featuredProjects = projectsData.slice(0, 3);
+
     return (
         <div className="flex items-center justify-center flex-col gap-6 md:gap-8 my-8 md:my-12 px-4 md:px-0">
             <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                 Projects
             </div>
             <div className="w-full space-y-3 md:space-y-4">
-                {projectsData.map((project) => (
+                {featuredProjects.map((project) => (
                     <ProjectCard key={project.name} project={project} />
                 ))}
             </div>
+            <Link
+                to="/projects"
+                className="px-6 py-2 rounded-lg bg-[#FFA500] bg-opacity-10 hover:bg-opacity-20 transition-all duration-300 flex items-center gap-2 text-sm"
+            >
+                View All Projects
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={2}
+                    stroke="currentColor"
+                    className="w-4 h-4"
+                >
+                    <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                    />
+                </svg>
+            </Link>
         </div>
     );
 };
