@@ -5,9 +5,7 @@ const skillsData = {
         { name: "JavaScript", icon: "devicon-javascript-plain" },
         { name: "TypeScript", icon: "devicon-typescript-plain" },
         { name: "Go", icon: "devicon-go-original-wordmark" },
-        { name: "Rust", icon: "devicon-rust-plain" },
         { name: "C++", icon: "devicon-cplusplus-plain" },
-        { name: "Java", icon: "devicon-java-plain" },
         { name: "Python", icon: "devicon-python-plain" },
     ],
     frameworks: [
@@ -22,6 +20,7 @@ const skillsData = {
         { name: "Material-UI", icon: "devicon-materialui-plain" },
     ],
     tools: [
+        { name: "Cursor", icon: "devicon-cursor-plain" },
         { name: "VS Code", icon: "devicon-vscode-plain" },
         { name: "Git", icon: "devicon-git-plain" },
         { name: "GitHub", icon: "devicon-github-original" },
@@ -33,14 +32,9 @@ const SkillBox = ({ skill }: { skill: { name: string; icon: string } }) => {
     return (
         <div
             key={skill.name}
-            className="flex items-center gap-1 md:gap-1.5 px-1.5 md:px-2 py-0.5 md:py-1 border border-gray-300 dark:border-gray-700 rounded-md hover:border-[#FFA500] dark:hover:border-[#FFA500] hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer whitespace-nowrap w-fit bg-white bg-opacity-50 dark:bg-transparent"
+            className="flex items-center px-1 md:px-1.5 py-0.25 md:py-0.5 border border-gray-300 rounded-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap w-fit bg-white"
         >
-            <i
-                className={`${skill.icon} text-base md:text-lg text-gray-700 dark:text-gray-300 group-hover:text-[#FFA500] dark:group-hover:text-[#FFA500]`}
-            ></i>
-            <span className="text-[10px] md:text-xs text-gray-700 dark:text-gray-300 group-hover:text-[#FFA500] dark:group-hover:text-[#FFA500]">
-                {skill.name}
-            </span>
+            <span className="text-xs text-black">{skill.name}</span>
         </div>
     );
 };
@@ -48,15 +42,13 @@ const SkillBox = ({ skill }: { skill: { name: string; icon: string } }) => {
 const Skills = (): React.ReactElement => {
     return (
         <div className="flex items-center justify-center flex-col gap-2 my-8 md:my-12 px-4 md:px-0">
-            <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
-                Skills
-            </div>
+            <div className="font-bold text-base md:text-lg">Skills</div>
             <div className="w-full">
                 <div className="mb-4 md:mb-6">
                     <h3 className="text-[#FFA500] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
                         Languages
                     </h3>
-                    <div className="flex flex-wrap gap-1.5 md:gap-2">
+                    <div className="flex flex-wrap gap-1.5 md:gap-2 font-semibold">
                         {skillsData.languages.map((skill) => (
                             <SkillBox key={skill.name} skill={skill} />
                         ))}
@@ -67,7 +59,7 @@ const Skills = (): React.ReactElement => {
                     <h3 className="text-[#FFA500] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
                         Frameworks & Tools
                     </h3>
-                    <div className="flex flex-wrap gap-1.5 md:gap-2">
+                    <div className="flex flex-wrap gap-1.5 md:gap-2 font-semibold">
                         {skillsData.frameworks.map((skill) => (
                             <SkillBox key={skill.name} skill={skill} />
                         ))}
@@ -78,7 +70,7 @@ const Skills = (): React.ReactElement => {
                     <h3 className="text-[#FFA500] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
                         Development Tools
                     </h3>
-                    <div className="flex flex-wrap gap-1.5 md:gap-2">
+                    <div className="flex flex-wrap gap-1.5 md:gap-2 font-semibold">
                         {skillsData.tools.map((skill) => (
                             <SkillBox key={skill.name} skill={skill} />
                         ))}

@@ -16,6 +16,12 @@ const timeLine = [
         description:
             "Secured runner-up position in competitive programming contest",
     },
+    {
+        date: "11th April, 2025 - 27th April, 2025",
+        event: "Hackhazards'2025 - The Namespace Community",
+        description:
+            "Participated in the hackathon organized by The Namespace Community",
+    },
 ];
 
 export default function Timeline() {
@@ -28,19 +34,19 @@ export default function Timeline() {
                 {timeLine.map((item, index) => (
                     <div
                         key={index}
-                        className="flex flex-col md:flex-row items-start gap-1 md:gap-4 p-3 rounded-lg transition-colors duration-300 bg-white dark:bg-transparent bg-opacity-75"
+                        className="gap-1 md:gap-4 p-3 rounded-lg transition-colors duration-300 bg-white dark:bg-transparent bg-opacity-75"
                     >
-                        <div className="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-1 md:mb-0 md:pt-0.5">
-                            {item.date}
-                        </div>
-                        <div>
+                        <div className="flex justify-between gap-1 md:gap-4">
                             <h3 className="text-[#FFA500] font-semibold text-sm md:text-base">
                                 {item.event}
                             </h3>
-                            <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mt-0.5 leading-relaxed">
-                                {item.description}
-                            </p>
+                            <div className="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-1 md:mb-0 md:pt-0.5">
+                                {item.date}
+                            </div>
                         </div>
+                        <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mt-0.5 leading-relaxed">
+                            {item.description}
+                        </p>
                     </div>
                 ))}
             </div>
