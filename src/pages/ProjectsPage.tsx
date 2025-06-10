@@ -1,7 +1,7 @@
 import React from "react";
 import { ProjectCard } from "../Components/Projects";
 import { projectsData } from "../data";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import ParticleBackground from "../Components/ParticleBackground";
 
 const ProjectsPage = (): React.ReactElement => {

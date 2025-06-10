@@ -10,8 +10,22 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import Work from "./Components/Work";
 import { ThemeProvider } from "./Context/ThemeContext";
 import ParticleBackground from "./Components/ParticleBackground";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+    createBrowserRouter,
+    RouterProvider,
+    ScrollRestoration,
+    Outlet,
+} from "react-router";
 import ProjectsPage from "./pages/ProjectsPage";
+
+function Layout() {
+    return (
+        <>
+            <ScrollRestoration />
+            <Outlet />
+        </>
+    );
+}
 
 function HomePage() {
     return (
@@ -33,15 +47,27 @@ function HomePage() {
     );
 }
 
+const router = createBrowserRouter([
+    {
+        path: "/",
+        element: <Layout />,
+        children: [
+            {
+                index: true,
+                element: <HomePage />,
+            },
+            {
+                path: "projects",
+                element: <ProjectsPage />,
+            },
+        ],
+    },
+]);
+
 function App() {
     return (
         <ThemeProvider>
-            <Router>
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/projects" element={<ProjectsPage />} />
-                </Routes>
-            </Router>
+            <RouterProvider router={router} />
         </ThemeProvider>
     );
 }
