@@ -16,10 +16,8 @@ const Home = (): React.ReactElement => {
                     <div className="w-[120px] h-[120px] rounded-full ring-2 ring-[#FFA500] bg-neutral-300"></div>
                 )}
                 <img
-                    className={`${
-                        loaded &&
-                        !error &&
-                        "w-[120px] rounded-full ring-2 ring-[#FFA500]"
+                    className={`w-[120px] rounded-full ring-2 ring-[#FFA500] ${
+                        loaded && !error ? "visible" : "invisible"
                     }`}
                     src="./Images/PatelDivyesh-square.jpg"
                     alt="Divyesh Patel"
