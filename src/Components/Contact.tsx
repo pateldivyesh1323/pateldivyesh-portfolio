@@ -40,7 +40,7 @@ const Contact = (): React.ReactElement => {
 
     return (
         <div className="flex items-center justify-center flex-col gap-6 md:gap-8 my-8 md:my-12 px-4 md:px-0">
-            <h2 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+            <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                 Contact
             </h2>
             <div className="w-full flex flex-col md:flex-row items-start justify-between gap-6 md:gap-12">

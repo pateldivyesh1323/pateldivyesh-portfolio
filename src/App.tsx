@@ -38,9 +38,9 @@ function HomePage() {
                 <Toaster />
                 <Home />
                 <Work />
-                <Skills />
                 <Projects />
                 <Timeline />
+                <Skills />
                 <Contact />
             </div>
         </div>
