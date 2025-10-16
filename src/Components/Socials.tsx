@@ -2,7 +2,7 @@ import React from "react";
 
 const Socials = (): React.ReactElement => {
     return (
-        <div className="flex items-center flex-row gap-8 text-gray-700 dark:text-white">
+        <div className="flex items-center flex-row gap-4 text-gray-700 dark:text-white">
             <a
                 href="https://github.com/pateldivyesh1323"
                 className="hover:text-[#FFA500] transition-colors duration-300"

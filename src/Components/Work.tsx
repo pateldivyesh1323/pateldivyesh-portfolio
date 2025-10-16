@@ -5,7 +5,7 @@ const experiences = [
         location: "Ahmedabad, India",
         duration: "March 2024 - August 2024",
         description:
-            "Sole developer responsible for designing and implementing the company's website using Next.js and Firebase, ensuring alignment with best practices.",
+            "Sole developer responsible for designing and implementing the financial advisory services company's online presence.",
     },
     {
         role: "Full-Stack Developer Intern",
@@ -13,7 +13,7 @@ const experiences = [
         location: "Remote",
         duration: "December 2024 - June 2025",
         description:
-            "Developed and enhanced features such as Construction Management, CRM, and Listings for a Real Estate platform using MERN stack and Material UI.",
+            "Developed and enhanced features such as Construction Management, CRM, and Listings for a Real Estate platform.",
     },
 ];
 

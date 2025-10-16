@@ -32,14 +32,23 @@ const Home = (): React.ReactElement => {
                 <div className="text-sm md:text-base max-w-[500px] font-normal text-gray-700 dark:text-gray-300 leading-relaxed mt-2 mb-4">
                     21, Developer
                 </div>
-                <div className="flex items-center justify-center md:justify-start gap-6 mt-4">
+                <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
                     <Socials />
                     <a
-                        href="/pateldivyesh-resume.pdf"
-                        download="pateldivyesh-resume.pdf"
-                        className="text-sm underline"
+                        href="/pateldivyesh.pdf"
+                        download="pateldivyesh.pdf"
+                        className="hover:text-[#FFA500] transition-colors duration-300"
                     >
-                        Resume
+                        <svg
+                            className="rounded"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor"
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M19.31 12.051c.381 0 .69.314.69.7v4.918c-.006.67-.127 1.2-.399 1.594c-.328.476-.908.692-1.747.737l-15.903-.002c-.646-.046-1.168-.302-1.507-.777c-.302-.423-.446-.95-.444-1.558V12.75c0-.386.309-.7.69-.7c.38 0 .688.314.688.7v4.913c0 .333.065.572.182.736c.081.114.224.184.44.201l15.817.001c.42-.023.627-.1.655-.14c.084-.123.146-.393.15-.8V12.75c0-.386.308-.7.689-.7ZM9.99 0c.38 0 .69.313.69.7l-.001 10.869l3.062-3.079a.682.682 0 0 1 .975.004a.707.707 0 0 1-.004.99l-4.356 4.38a.682.682 0 0 1-.973-.003l-4.296-4.38a.707.707 0 0 1 .002-.99a.682.682 0 0 1 .975.002L9.3 11.794V.699C9.3.313 9.61 0 9.99 0Z" />
+                        </svg>
                     </a>
                 </div>
             </div>
