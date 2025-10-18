@@ -1,6 +1,6 @@
 const timeLine = [
     {
-        date: "October, 2023",
+        date: "October, 2023/2024",
         event: "Hacktoberfest",
         description: "Participated in open source contributions",
     },
@@ -20,7 +20,13 @@ const timeLine = [
         date: "11th April, 2025 - 27th April, 2025",
         event: "Hackhazards'2025 - The Namespace Community",
         description:
-            "Participated in the hackathon organized by The Namespace Community",
+            "Participated in hackathon organized by The Namespace Community",
+    },
+    {
+        date: "20th September, 2025",
+        event: "Devhacks S2",
+        description:
+            "Participated in hackathon organized but the devlabs team at ASU",
     },
 ];
 

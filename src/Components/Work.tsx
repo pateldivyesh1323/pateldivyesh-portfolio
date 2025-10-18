@@ -20,14 +20,14 @@ const experiences = [
 export default function Work() {
     return (
         <div className="flex items-center justify-center flex-col gap-4 my-8 md:my-12 px-4 md:px-0">
-            <h2 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white">
+            <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                 Work
             </h2>
-            <div className="w-full space-y-4 md:space-y-6">
+            <div className="w-full">
                 {experiences.map((exp, index) => (
                     <div
                         key={index}
-                        className="border border-gray-300 dark:border-gray-700 rounded-lg p-4 md:p-6 transition-colors duration-300 bg-white dark:bg-transparent"
+                        className="p-4 md:p-6 transition-colors duration-300"
                     >
                         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-0 mb-2">
                             <div>

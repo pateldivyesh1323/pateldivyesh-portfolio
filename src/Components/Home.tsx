@@ -30,7 +30,7 @@ const Home = (): React.ReactElement => {
                     Divyesh Patel
                 </div>
                 <div className="text-sm md:text-base max-w-[500px] font-normal text-gray-700 dark:text-gray-300 leading-relaxed mt-2 mb-4">
-                    21, Developer
+                    21, Developer <br /> Arizona, USA
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
                     <Socials />

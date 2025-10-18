@@ -9,6 +9,15 @@ export interface Project {
 
 export const projectsData: Project[] = [
     {
+        name: "Parlo",
+        techStack:
+            "React, MongoDB, NodeJS, ExpressJS, Firebase, Redis, GeminiAI, GrokAI",
+        description:
+            "Parlo is an AI-powered platform that breaks language barriers through real-time text and voice translation, enabling seamless global communication with intelligent, context-aware translations.",
+        github: "https://github.com/pateldivyesh1323/parlo",
+        image: "/Images/Projects/Parlo.png",
+    },
+    {
         name: "Submitly",
         techStack: "ReactJS, TailwindCSS, RadixUI, MongoDB, NodeJS, ExpressJS",
         description:
