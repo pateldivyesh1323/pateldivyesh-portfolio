@@ -1,19 +1,19 @@
 const experiences = [
     {
-        role: "Software Engineer Intern",
-        company: "Caring Click",
-        location: "Ahmedabad, India",
-        duration: "March 2024 - August 2024",
-        description:
-            "Sole developer responsible for designing and implementing the financial advisory services company's online presence.",
-    },
-    {
         role: "Full-Stack Developer Intern",
         company: "RealList AI",
         location: "Remote",
         duration: "December 2024 - June 2025",
         description:
             "Developed and enhanced features such as Construction Management, CRM, and Listings for a Real Estate platform.",
+    },
+    {
+        role: "Software Engineer Intern",
+        company: "Caring Click",
+        location: "Ahmedabad, India",
+        duration: "March 2024 - August 2024",
+        description:
+            "Sole developer responsible for designing and implementing the financial advisory services company's online presence.",
     },
 ];
 
