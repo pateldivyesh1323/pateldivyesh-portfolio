@@ -4,7 +4,7 @@ import { Project, projectsData } from "../data";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
     return (
-        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-4 border border-gray-300 dark:border-gray-700 rounded-lg hover:border-[#FFA500] dark:hover:border-[#FFA500] transition-all duration-300 group bg-white dark:bg-transparent bg-opacity-75">
+        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-4 border border-gray-300 dark:border-gray-700 rounded-lg hover:border-[#FFA500] dark:hover:border-[#FFA500] transition-all duration-300 group bg-white/75 dark:bg-transparent">
             <img
                 src={project.image}
                 alt={project.name}
@@ -84,7 +84,7 @@ const Projects = (): React.ReactElement => {
             </div>
             <Link
                 to="/projects"
-                className="px-6 py-2 rounded-lg bg-[#FFA500] bg-opacity-10 hover:bg-opacity-20 transition-all duration-300 flex items-center gap-2 text-sm"
+                className="px-6 py-2 rounded-lg bg-[#FFA500]/10 hover:bg-[#FFA500]/20 transition-all duration-300 flex items-center gap-2 text-sm"
             >
                 View All Projects
                 <svg

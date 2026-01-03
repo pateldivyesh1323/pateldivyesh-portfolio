@@ -97,7 +97,7 @@ const Contact = (): React.ReactElement => {
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full py-1.5 md:py-2 text-sm bg-[#FFA500] text-black font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                            className="w-full py-1.5 md:py-2 text-sm bg-[#FFA500] text-black font-semibold rounded-lg hover:bg-[#FFA500]/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                         >
                             {isLoading ? (
                                 <>

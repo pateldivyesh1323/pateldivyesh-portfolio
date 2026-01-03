@@ -40,7 +40,7 @@ export default function Timeline() {
                 {timeLine.map((item, index) => (
                     <div
                         key={index}
-                        className="gap-1 md:gap-4 p-3 rounded-lg transition-colors duration-300 bg-white dark:bg-transparent bg-opacity-75"
+                        className="gap-1 md:gap-4 p-3 rounded-lg transition-colors duration-300 bg-white/75 dark:bg-transparent"
                     >
                         <div className="flex justify-between gap-1 md:gap-4">
                             <h3 className="text-[#FFA500] font-semibold text-sm md:text-base">
