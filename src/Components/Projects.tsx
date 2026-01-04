@@ -19,7 +19,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                         {project.github && (
                             <a
                                 href={project.github}
-                                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
+                                className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                         {project.link && (
                             <a
                                 href={project.link}
-                                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
+                                className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"

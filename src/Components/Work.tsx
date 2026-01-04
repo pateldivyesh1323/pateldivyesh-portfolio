@@ -38,7 +38,7 @@ export default function Work() {
                                     {exp.company} • {exp.location}
                                 </p>
                             </div>
-                            <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400 order-first md:order-none">
+                            <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400 order-first md:order-0">
                                 {exp.duration}
                             </span>
                         </div>

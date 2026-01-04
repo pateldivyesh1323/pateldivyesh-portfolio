@@ -32,29 +32,44 @@ const timeLine = [
 
 export default function Timeline() {
     return (
-        <div className="flex items-center justify-center flex-col gap-4 my-8 md:my-12 px-4 md:px-0">
+        <div className="flex items-center justify-center flex-col gap-3 my-6 md:my-8 px-4 md:px-0">
             <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                 Timeline
             </div>
-            <div className="w-full space-y-4">
-                {timeLine.map((item, index) => (
-                    <div
-                        key={index}
-                        className="gap-1 md:gap-4 p-3 transition-colors duration-300 bg-white/75 dark:bg-transparent"
-                    >
-                        <div className="flex justify-between gap-1 md:gap-4">
-                            <h3 className="text-[#DC2626] font-semibold text-sm md:text-base">
-                                {item.event}
-                            </h3>
-                            <div className="text-xs md:text-sm text-gray-500 dark:text-gray-400 mb-1 md:mb-0 md:pt-0.5">
-                                {item.date}
-                            </div>
-                        </div>
-                        <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mt-0.5 leading-relaxed">
-                            {item.description}
-                        </p>
-                    </div>
-                ))}
+            <div className="w-full overflow-x-auto">
+                <table className="w-full border-collapse">
+                    <thead className="hidden md:table-header-group">
+                        <tr className="border-b border-gray-300 dark:border-gray-700">
+                            <th className="text-left py-2 px-3 text-[10px] md:text-xs font-semibold text-gray-700 dark:text-gray-300">
+                                Date
+                            </th>
+                            <th className="text-left py-2 px-3 text-[10px] md:text-xs font-semibold text-gray-700 dark:text-gray-300">
+                                Event
+                            </th>
+                            <th className="text-left py-2 px-3 text-[10px] md:text-xs font-semibold text-gray-700 dark:text-gray-300">
+                                Description
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {timeLine.map((item, index) => (
+                            <tr
+                                key={index}
+                                className="border-b border-gray-200 dark:border-gray-800 hover:bg-white/50 dark:hover:bg-gray-800/30 transition-colors duration-300"
+                            >
+                                <td className="py-2 px-3 text-[10px] md:text-xs text-gray-500 dark:text-gray-400 align-top md:align-middle whitespace-nowrap">
+                                    {item.date}
+                                </td>
+                                <td className="py-2 px-3 text-[10px] md:text-xs text-[#DC2626] font-semibold align-top md:align-middle">
+                                    {item.event}
+                                </td>
+                                <td className="py-2 px-3 text-[10px] md:text-xs text-gray-600 dark:text-gray-300 align-top md:align-middle">
+                                    {item.description}
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
             </div>
         </div>
     );

@@ -11,9 +11,9 @@ const Home = (): React.ReactElement => {
             <div className="absolute top-0 right-0 z-10">
                 <ThemeToggle />
             </div>
-            <div className="md:ml-0 relative border border-[#DC2626]">
+            <div className="md:ml-0 relative border border-[#DC2626] rounded-full">
                 {(!loaded || error) && (
-                    <div className="w-[70px] h-[70px] bg-neutral-300 relative"></div>
+                    <div className="w-[70px] h-[70px] bg-neutral-300 relative rounded-full"></div>
                 )}
                 <div
                     className={`relative w-[70px] h-[70px] ${
@@ -21,7 +21,7 @@ const Home = (): React.ReactElement => {
                     }`}
                 >
                     <img
-                        className="w-full h-full object-cover relative z-10"
+                        className="w-full h-full object-cover relative z-10 rounded-full"
                         src="./Images/PatelDivyesh-square.jpg"
                         alt="Divyesh Patel"
                         onLoad={() => setLoaded(true)}
@@ -34,7 +34,7 @@ const Home = (): React.ReactElement => {
                     Divyesh Patel
                 </div>
                 <div className="text-sm md:text-base max-w-[500px] font-normal text-gray-700 dark:text-gray-300 leading-relaxed mt-2 mb-4">
-                    21, Developer <br /> Arizona, USA
+                    22, Developer <br /> Arizona, USA
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-4 mt-4">
                     <Socials />
