@@ -4,22 +4,22 @@ import { Project, projectsData } from "../data";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
     return (
-        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-4 border border-gray-300 dark:border-gray-700 rounded-lg hover:border-[#FFA500] dark:hover:border-[#FFA500] transition-all duration-300 group bg-white/75 dark:bg-transparent">
+        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-4 border border-gray-300 dark:border-gray-700 hover:border-[#DC2626] dark:hover:border-[#DC2626] transition-all duration-300 group bg-white/75 dark:bg-transparent">
             <img
                 src={project.image}
                 alt={project.name}
-                className="w-full md:w-48 h-48 md:h-32 rounded-md object-cover"
+                className="w-full md:w-48 h-48 md:h-32 object-cover"
             />
             <div className="flex-1 w-full">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-0 mb-2">
-                    <h3 className="font-semibold text-[#FFA500] text-lg md:text-base">
+                    <h3 className="font-semibold text-[#DC2626] text-lg md:text-base">
                         {project.name}
                     </h3>
                     <div className="flex gap-4">
                         {project.github && (
                             <a
                                 href={project.github}
-                                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#FFA500] dark:hover:text-[#FFA500] transition-colors duration-300 text-sm"
+                                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                         {project.link && (
                             <a
                                 href={project.link}
-                                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#FFA500] dark:hover:text-[#FFA500] transition-colors duration-300 text-sm"
+                                className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -84,7 +84,7 @@ const Projects = (): React.ReactElement => {
             </div>
             <Link
                 to="/projects"
-                className="px-6 py-2 rounded-lg bg-[#FFA500]/10 hover:bg-[#FFA500]/20 transition-all duration-300 flex items-center gap-2 text-sm"
+                className="px-6 py-2 bg-[#DC2626]/10 hover:bg-[#DC2626]/20 transition-all duration-300 flex items-center gap-2 text-sm"
             >
                 View All Projects
                 <svg

@@ -7,23 +7,27 @@ const Home = (): React.ReactElement => {
     const [error, setError] = useState(false);
 
     return (
-        <div className="flex items-center flex-col md:flex-row gap-8 my-8 md:my-12 px-4 md:px-6 w-full relative">
+        <div className="flex items-start flex-col md:flex-row gap-8 my-8 md:my-12 px-4 md:px-6 w-full relative">
             <div className="absolute top-0 right-0 z-10">
                 <ThemeToggle />
             </div>
-            <div className="md:ml-0">
+            <div className="md:ml-0 relative border border-[#DC2626]">
                 {(!loaded || error) && (
-                    <div className="w-[120px] h-[120px] rounded-full ring-2 ring-[#FFA500] bg-neutral-300"></div>
+                    <div className="w-[70px] h-[70px] bg-neutral-300 relative"></div>
                 )}
-                <img
-                    className={`w-[120px] rounded-full ring-2 ring-[#FFA500] ${
+                <div
+                    className={`relative w-[70px] h-[70px] ${
                         loaded && !error ? "block" : "hidden"
                     }`}
-                    src="./Images/PatelDivyesh-square.jpg"
-                    alt="Divyesh Patel"
-                    onLoad={() => setLoaded(true)}
-                    onError={() => setError(true)}
-                />
+                >
+                    <img
+                        className="w-full h-full object-cover relative z-10"
+                        src="./Images/PatelDivyesh-square.jpg"
+                        alt="Divyesh Patel"
+                        onLoad={() => setLoaded(true)}
+                        onError={() => setError(true)}
+                    />
+                </div>
             </div>
             <div className="text-md max-w-xl text-center md:text-left md:flex-1">
                 <div className="text-3xl md:text-4xl font-bold font-poppins text-gray-900 dark:text-white">
@@ -37,10 +41,10 @@ const Home = (): React.ReactElement => {
                     <a
                         href="/pateldivyesh.pdf"
                         download="pateldivyesh.pdf"
-                        className="hover:text-[#FFA500] transition-colors duration-300"
+                        className="hover:text-[#DC2626] transition-colors duration-300"
                     >
                         <svg
-                            className="rounded"
+                            className=""
                             xmlns="http://www.w3.org/2000/svg"
                             fill="currentColor"
                             width="24"

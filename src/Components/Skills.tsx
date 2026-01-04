@@ -32,7 +32,7 @@ const SkillBox = ({ skill }: { skill: { name: string; icon: string } }) => {
     return (
         <div
             key={skill.name}
-            className="flex items-center px-1 md:px-1.5 py-0.25 md:py-0.5 border border-gray-300 rounded-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap w-fit bg-white"
+            className="flex items-center px-1 md:px-1.5 py-0.25 md:py-0.5 border border-gray-300 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap w-fit bg-white"
         >
             <span className="text-xs text-black">{skill.name}</span>
         </div>
@@ -45,7 +45,7 @@ const Skills = (): React.ReactElement => {
             <div className="font-bold text-base md:text-lg">Skills</div>
             <div className="w-full">
                 <div className="mb-4 md:mb-6">
-                    <h3 className="text-[#FFA500] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
+                    <h3 className="text-[#DC2626] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
                         Languages
                     </h3>
                     <div className="flex flex-wrap gap-1.5 md:gap-2 font-semibold">
@@ -56,7 +56,7 @@ const Skills = (): React.ReactElement => {
                 </div>
 
                 <div className="mb-4 md:mb-6">
-                    <h3 className="text-[#FFA500] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
+                    <h3 className="text-[#DC2626] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
                         Frameworks & Tools
                     </h3>
                     <div className="flex flex-wrap gap-1.5 md:gap-2 font-semibold">
@@ -67,7 +67,7 @@ const Skills = (): React.ReactElement => {
                 </div>
 
                 <div>
-                    <h3 className="text-[#FFA500] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
+                    <h3 className="text-[#DC2626] font-semibold mb-2 md:mb-3 text-xs md:text-sm">
                         Development Tools
                     </h3>
                     <div className="flex flex-wrap gap-1.5 md:gap-2 font-semibold">

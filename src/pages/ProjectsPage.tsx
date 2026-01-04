@@ -8,7 +8,7 @@ const ProjectsPage = (): React.ReactElement => {
     return (
         <div className="relative transition-colors duration-300">
             <ParticleBackground />
-            <div className="absolute top-0 left-0 right-0 h-[300px] bg-[#FFA500] blur-[150px] opacity-20 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 right-0 h-[300px] bg-[#DC2626] blur-[150px] opacity-20 pointer-events-none"></div>
             <div className="max-w-3xl mx-auto relative py-8 md:py-12 px-4 md:px-0">
                 <div className="flex items-center justify-between mb-8">
                     <h1 className="font-bold text-xl md:text-2xl text-gray-900 dark:text-white">
@@ -16,7 +16,7 @@ const ProjectsPage = (): React.ReactElement => {
                     </h1>
                     <Link
                         to="/"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#FFA500] dark:hover:text-[#FFA500] transition-colors duration-300 text-sm"
+                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

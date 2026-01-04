@@ -3,7 +3,7 @@ import React from "react";
 export const SunIcon: React.FC = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 text-yellow-400"
+        className="h-5 w-5 text-[#DC2626]"
         viewBox="0 0 20 20"
         fill="currentColor"
     >
@@ -18,7 +18,7 @@ export const SunIcon: React.FC = () => (
 export const MoonIcon: React.FC = () => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5 text-gray-700 dark:text-slate-300"
+        className="h-5 w-5 text-[#DC2626]"
         viewBox="0 0 20 20"
         fill="currentColor"
     >

@@ -20,5 +20,5 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    @apply bg-[#ffa500] rounded-md;
+    @apply bg-[#DC2626];
 }

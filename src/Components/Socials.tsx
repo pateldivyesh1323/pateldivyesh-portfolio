@@ -5,7 +5,7 @@ const Socials = (): React.ReactElement => {
         <div className="flex items-center flex-row gap-4 text-gray-700 dark:text-white">
             <a
                 href="https://github.com/pateldivyesh1323"
-                className="hover:text-[#FFA500] transition-colors duration-300"
+                className="hover:text-[#DC2626] transition-colors duration-300"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ const Socials = (): React.ReactElement => {
             </a>
             <a
                 href="https://www.linkedin.com/in/divyeshdeveloper"
-                className="hover:text-[#FFA500] transition-colors duration-300"
+                className="hover:text-[#DC2626] transition-colors duration-300"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ const Socials = (): React.ReactElement => {
             </a>
             <a
                 href="https://www.instagram.com/divyeshpatel.exe"
-                className="hover:text-[#FFA500] transition-colors duration-300"
+                className="hover:text-[#DC2626] transition-colors duration-300"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -47,10 +47,10 @@ const Socials = (): React.ReactElement => {
             </a>
             <a
                 href="https://www.facebook.com/pateldivyesh1323/"
-                className="hover:text-[#FFA500] transition-colors duration-300"
+                className="hover:text-[#DC2626] transition-colors duration-300"
             >
                 <svg
-                    className="rounded"
+                    className=""
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
                     width="24"

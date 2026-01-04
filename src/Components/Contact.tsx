@@ -53,7 +53,7 @@ const Contact = (): React.ReactElement => {
                     <div className="space-y-3 md:space-y-4">
                         <a
                             href="mailto:pateldivyesh1323@gmail.com"
-                            className="block text-xs md:text-sm text-gray-600 dark:text-gray-300 hover:text-[#FFA500] transition-colors duration-300"
+                            className="block text-xs md:text-sm text-gray-600 dark:text-gray-300 hover:text-[#DC2626] transition-colors duration-300"
                         >
                             pateldivyesh1323@gmail.com
                         </a>
@@ -74,7 +74,7 @@ const Contact = (): React.ReactElement => {
                             type="text"
                             name="name"
                             placeholder="Name"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
+                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-[#DC2626] transition-all duration-300"
                         />
                         <input
                             value={email}
@@ -83,7 +83,7 @@ const Contact = (): React.ReactElement => {
                             type="email"
                             name="email"
                             placeholder="Email"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
+                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-[#DC2626] transition-all duration-300"
                         />
                         <textarea
                             value={message}
@@ -92,12 +92,12 @@ const Contact = (): React.ReactElement => {
                             rows={4}
                             name="message"
                             placeholder="Message"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 rounded-lg focus:outline-none focus:ring-1 focus:ring-[#FFA500] transition-all duration-300"
+                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-[#DC2626] transition-all duration-300"
                         />
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full py-1.5 md:py-2 text-sm bg-[#FFA500] text-black font-semibold rounded-lg hover:bg-[#FFA500]/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                            className="w-full py-1.5 md:py-2 text-sm bg-[#DC2626] text-black font-semibold hover:bg-[#DC2626]/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                         >
                             {isLoading ? (
                                 <>

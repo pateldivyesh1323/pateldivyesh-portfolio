@@ -31,7 +31,7 @@ export default function Work() {
                     >
                         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-0 mb-2">
                             <div>
-                                <h3 className="text-[#FFA500] font-semibold text-base md:text-lg">
+                                <h3 className="text-[#DC2626] font-semibold text-base md:text-lg">
                                     {exp.role}
                                 </h3>
                                 <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300">
