@@ -124,7 +124,7 @@ const ParticleBackground: React.FC = () => {
 
         // Create star array
         const stars: Star[] = [];
-        const starCount = 50;
+        const starCount = 20;
 
         for (let i = 0; i < starCount; i++) {
             stars.push(new Star());

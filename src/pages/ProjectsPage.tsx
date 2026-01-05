@@ -2,13 +2,10 @@ import React from "react";
 import { ProjectCard } from "../Components/Projects";
 import { projectsData } from "../data";
 import { Link } from "react-router";
-import ParticleBackground from "../Components/ParticleBackground";
 
 const ProjectsPage = (): React.ReactElement => {
     return (
         <div className="relative transition-colors duration-300">
-            <ParticleBackground />
-            <div className="absolute top-0 left-0 right-0 h-[300px] bg-[#DC2626] blur-[150px] opacity-20 pointer-events-none"></div>
             <div className="max-w-3xl mx-auto relative py-8 md:py-12 px-4 md:px-0">
                 <div className="flex items-center justify-between mb-8">
                     <h1 className="font-bold text-xl md:text-2xl text-gray-900 dark:text-white">

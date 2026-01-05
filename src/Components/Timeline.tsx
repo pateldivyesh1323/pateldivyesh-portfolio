@@ -1,34 +1,4 @@
-const timeLine = [
-    {
-        date: "October, 2023/2024",
-        event: "Hacktoberfest",
-        description: "Participated in open source contributions",
-    },
-    {
-        date: "November, 2023",
-        event: "MLH November long hackathon",
-        description:
-            "Participated in month-long hackathon building innovative projects",
-    },
-    {
-        date: "9th February, 2024",
-        event: "Jumble programming by Silver oak university",
-        description:
-            "Secured runner-up position in competitive programming contest",
-    },
-    {
-        date: "11th April, 2025 - 27th April, 2025",
-        event: "Hackhazards'2025 - The Namespace Community",
-        description:
-            "Participated in hackathon organized by The Namespace Community",
-    },
-    {
-        date: "20th September, 2025",
-        event: "Devhacks S2",
-        description:
-            "Participated in hackathon organized but the devlabs team at ASU",
-    },
-];
+import { timeLineData } from "../data";
 
 export default function Timeline() {
     return (
@@ -52,7 +22,7 @@ export default function Timeline() {
                         </tr>
                     </thead>
                     <tbody>
-                        {timeLine.map((item, index) => (
+                        {timeLineData.map((item, index) => (
                             <tr
                                 key={index}
                                 className="border-b border-gray-200 dark:border-gray-800 hover:bg-white/50 dark:hover:bg-gray-800/30 transition-colors duration-300"

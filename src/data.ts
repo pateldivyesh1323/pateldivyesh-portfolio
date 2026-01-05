@@ -1,4 +1,4 @@
-export interface Project {
+interface Project {
     name: string;
     techStack: string;
     description: string;
@@ -7,7 +7,7 @@ export interface Project {
     image: string;
 }
 
-export const projectsData: Project[] = [
+const projectsData: Project[] = [
     {
         name: "Parlo",
         techStack:
@@ -18,13 +18,32 @@ export const projectsData: Project[] = [
         image: "/Images/Projects/Parlo.png",
     },
     {
-        name: "Submitly",
-        techStack: "ReactJS, TailwindCSS, RadixUI, MongoDB, NodeJS, ExpressJS",
+        name: "EscalateConvo",
+        techStack:
+            "React, MongoDB, NodeJS, ExpressJS, Firebase, GeminiAI, ElevenLabs",
         description:
-            "Submitly is a seamless form submission solution that simplifies how users interact with your website. Without the need for a backend server, Submitly allows you to receive form submissions directly into your inbox.",
-        link: "https://submitlyforms.vercel.app",
-        github: "https://github.com/pateldivyesh1323/submitly",
-        image: "/Images/Projects/Submitly.png",
+            "EscalateConvo is an AI-powered platform that helps you escalate your conversations with your customers by using GeminiAI to generate responses and ElevenLabs to generate voice responses.",
+        github: "https://github.com/orgs/EscalateConvo/repositories",
+        image: "/Images/Projects/EscalateConvo.png",
+    },
+    {
+        name: "ThreatIQ",
+        techStack:
+            "React, MongoDB, NodeJS, ExpressJS, Clerk, GroqAI, RTSP stream",
+        description:
+            "ThreatIQ is an AI-powered platform that helps you detect and respond to threats in real-time by using CCTV feeds. It uses GroqAI to analyze the stream and detect threats like fire, robbery, violence, suspicious activities, etc.",
+        github: "https://github.com/hackventuresorg/threatiq",
+        image: "/Images/Projects/ThreatIQ.png",
+    },
+    {
+        name: "FAQSmith",
+        techStack:
+            "React, Python, FastAPI, GeminiAI, Vector Embedding, Clustering",
+        description:
+            "FAQSmith is an AI-powered platform that helps you generate frequently asked questions from your customer support data.",
+        github: "https://github.com/pateldivyesh1323/FAQSmith",
+        image: "/Images/Projects/FAQSmith.png",
+        link: "https://faqsmith.vercel.app",
     },
     {
         name: "Futflare",
@@ -90,3 +109,65 @@ export const projectsData: Project[] = [
         image: "/Images/Projects/Wondersofworld.png",
     },
 ];
+
+const timeLineData = [
+    {
+        date: "October, 2023/2024",
+        event: "Hacktoberfest",
+        description: "Participated in open source contributions",
+    },
+    {
+        date: "November, 2023",
+        event: "MLH November long hackathon",
+        description:
+            "Participated in month-long hackathon building innovative projects",
+    },
+    {
+        date: "9th February, 2024",
+        event: "Jumbled Programming by Silver oak university",
+        description:
+            "Secured runner-up position in competitive programming contest",
+    },
+    {
+        date: "11th April, 2025 - 27th April, 2025",
+        event: "Hackhazards'2025 - The Namespace Community",
+        description:
+            "Participated in hackathon organized by The Namespace Community",
+    },
+    {
+        date: "20th September, 2025",
+        event: "Devhacks S2",
+        description:
+            "Participated in hackathon organized but the devlabs team at ASU",
+    },
+    {},
+];
+
+const experienceData = [
+    {
+        role: "Full-Stack Developer Intern",
+        company: "RealList AI",
+        location: "Remote",
+        duration: "December 2024 - June 2025",
+        description:
+            "Developed over 15 core features for property management using the MERN stack and AWS, including a marketplace and an AI support bot. I also updated database queries and added caching to improve system speed and handle higher traffic.",
+    },
+    {
+        role: "Software Engineer Intern",
+        company: "Caring Click",
+        location: "Ahmedabad, India",
+        duration: "March 2024 - August 2024",
+        description:
+            "Built the company’s main platform using NextJS and Firebase to support financial guidance for over 500 monthly users. I also integrated the payment system and managed cloud deployment to keep the site stable and available.",
+    },
+    {
+        role: "Project Mentor",
+        company: "Software development association at ASU",
+        location: "Tempe, AZ, USA",
+        duration: "October 2025 - November 2025",
+        description:
+            "Guided students in building an AI-powered document assistant that summarizes academic papers and explains complex concepts. I provided technical direction on integrating AI models for text analysis and structuring the React-based frontend for a responsive user experience.",
+    },
+];
+
+export { projectsData, timeLineData, type Project, experienceData };

@@ -1,21 +1,4 @@
-const experiences = [
-    {
-        role: "Full-Stack Developer Intern",
-        company: "RealList AI",
-        location: "Remote",
-        duration: "December 2024 - June 2025",
-        description:
-            "Developed and enhanced features such as Construction Management, CRM, and Listings for a Real Estate platform.",
-    },
-    {
-        role: "Software Engineer Intern",
-        company: "Caring Click",
-        location: "Ahmedabad, India",
-        duration: "March 2024 - August 2024",
-        description:
-            "Sole developer responsible for designing and implementing the financial advisory services company's online presence.",
-    },
-];
+import { experienceData } from "../data";
 
 export default function Work() {
     return (
@@ -24,7 +7,7 @@ export default function Work() {
                 Work
             </h2>
             <div className="w-full">
-                {experiences.map((exp, index) => (
+                {experienceData.map((exp, index) => (
                     <div
                         key={index}
                         className="p-4 md:p-6 transition-colors duration-300"
@@ -42,7 +25,7 @@ export default function Work() {
                                 {exp.duration}
                             </span>
                         </div>
-                        <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mt-3 md:mt-4 leading-relaxed">
+                        <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mt-3 md:mt-4 leading-relaxed text-justify">
                             {exp.description}
                         </p>
                     </div>

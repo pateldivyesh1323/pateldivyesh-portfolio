@@ -4,7 +4,7 @@ import { Project, projectsData } from "../data";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
     return (
-        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-4 border border-gray-300 dark:border-gray-700 hover:border-[#DC2626] dark:hover:border-[#DC2626] transition-all duration-300 group bg-white/75 dark:bg-transparent">
+        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-2 border border-gray-300 dark:border-gray-700 hover:border-[#DC2626] dark:hover:border-[#DC2626] transition-all duration-300 group bg-white/75 dark:bg-transparent">
             <img
                 src={project.image}
                 alt={project.name}
@@ -60,7 +60,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                 <div className="font-semibold text-gray-800 dark:text-neutral-200 mb-2 text-[11px] md:text-xs">
                     {project.techStack}
                 </div>
-                <div className="text-gray-700 dark:text-neutral-200 text-xs md:text-sm leading-relaxed">
+                <div className="text-gray-700 dark:text-neutral-200 text-xs md:text-sm leading-relaxed text-justify">
                     {project.description}
                 </div>
             </div>
