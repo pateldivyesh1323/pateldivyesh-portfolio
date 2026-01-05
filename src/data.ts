@@ -140,7 +140,11 @@ const timeLineData = [
         description:
             "Participated in hackathon organized but the devlabs team at ASU",
     },
-    {},
+    {
+        date: "December, 2025",
+        event: "AI Partner Catalyst: Accelerate Innovation Hackathon",
+        description: "Participated in hackathon organized by google cloud",
+    },
 ];
 
 const experienceData = [

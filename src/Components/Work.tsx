@@ -10,7 +10,7 @@ export default function Work() {
                 {experienceData.map((exp, index) => (
                     <div
                         key={index}
-                        className="p-4 md:p-6 transition-colors duration-300"
+                        className="py-4 md:py-6 transition-colors duration-300"
                     >
                         <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-0 mb-2">
                             <div>
@@ -21,7 +21,7 @@ export default function Work() {
                                     {exp.company} • {exp.location}
                                 </p>
                             </div>
-                            <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400 order-first md:order-0">
+                            <span className="text-xs md:text-sm text-gray-500 dark:text-gray-400">
                                 {exp.duration}
                             </span>
                         </div>
