@@ -5,7 +5,7 @@ export default function PapershelfPage() {
     return (
         <div className="relative transition-colors duration-300">
             <div className="max-w-3xl mx-auto relative py-8 md:py-12 px-4 md:px-0">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+                <div className="flex items-start justify-between gap-4 mb-4">
                     <div>
                         <h1 className="font-bold text-xl md:text-2xl text-gray-900 dark:text-white">
                             Papershelf

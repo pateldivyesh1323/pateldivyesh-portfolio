@@ -74,7 +74,7 @@ const Projects = (): React.ReactElement => {
 
     return (
         <div className="my-8 md:my-12 px-4 md:px-0">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+            <div className="flex items-center justify-between gap-4 mb-6">
                 <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                     Projects
                 </h2>
