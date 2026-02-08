@@ -1,9 +1,8 @@
-import React from "react";
-import { ProjectCard } from "../Components/Projects";
-import { projectsData } from "../data";
-import { Link } from "react-router";
+import Link from "next/link";
+import { ProjectCard } from "@/Components/Projects";
+import { projectsData } from "@/data";
 
-const ProjectsPage = (): React.ReactElement => {
+export default function ProjectsPage() {
     return (
         <div className="relative transition-colors duration-300">
             <div className="max-w-3xl mx-auto relative py-8 md:py-12 px-4 md:px-0">
@@ -12,7 +11,7 @@ const ProjectsPage = (): React.ReactElement => {
                         All Projects
                     </h1>
                     <Link
-                        to="/"
+                        href="/"
                         className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
                     >
                         <svg
@@ -40,6 +39,4 @@ const ProjectsPage = (): React.ReactElement => {
             </div>
         </div>
     );
-};
-
-export default ProjectsPage;
+}

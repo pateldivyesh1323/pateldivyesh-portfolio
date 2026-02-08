@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import Socials from "./Socials";
 import toast from "react-hot-toast";

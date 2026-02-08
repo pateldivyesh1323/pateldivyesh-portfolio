@@ -1,31 +1,29 @@
-import React, { useState } from "react";
+"use client";
+
+import React from "react";
 import Socials from "./Socials";
 import ThemeToggle from "./ThemeToggle";
+import Image from "next/image";
 
 const Home = (): React.ReactElement => {
-    const [loaded, setLoaded] = useState(false);
-    const [error, setError] = useState(false);
-
     return (
         <div className="flex items-start flex-col md:flex-row gap-6 md:gap-8 my-8 md:my-12 px-4 md:px-6 w-full relative">
             <div className="absolute top-2 right-2 md:top-0 md:right-0 z-10">
                 <ThemeToggle />
             </div>
             <div className="mx-auto md:mx-0 relative border border-[#DC2626] rounded-full">
-                {(!loaded || error) && (
-                    <div className="w-[80px] h-[80px] md:w-[70px] md:h-[70px] bg-neutral-300 relative rounded-full"></div>
-                )}
                 <div
-                    className={`relative w-[80px] h-[80px] md:w-[70px] md:h-[70px] ${
-                        loaded && !error ? "block" : "hidden"
-                    }`}
+                    className={`relative w-[100px] h-[100px] md:w-[90px] md:h-[90px]`}
                 >
-                    <img
+                    <Image
                         className="w-full h-full object-cover relative z-10 rounded-full"
-                        src="./Images/PatelDivyesh-square.jpg"
+                        src="/Images/PatelDivyesh-square.jpg"
                         alt="Divyesh Patel"
-                        onLoad={() => setLoaded(true)}
-                        onError={() => setError(true)}
+                        width={100}
+                        height={100}
+                        placeholder="blur"
+                        blurDataURL="/Images/PatelDivyesh-square.jpg"
+                        loading="eager"
                     />
                 </div>
             </div>

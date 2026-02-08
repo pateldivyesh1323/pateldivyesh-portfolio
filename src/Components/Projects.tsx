@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router";
-import { Project, projectsData } from "../data";
+import Link from "next/link";
+import { Project, projectsData } from "@/data";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
     return (
@@ -83,7 +83,7 @@ const Projects = (): React.ReactElement => {
                 ))}
             </div>
             <Link
-                to="/projects"
+                href="/projects"
                 className="px-6 py-2 bg-[#DC2626]/10 hover:bg-[#DC2626]/20 transition-all duration-300 flex items-center gap-2 text-sm"
             >
                 View All Projects

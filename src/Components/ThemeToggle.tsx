@@ -1,6 +1,8 @@
+"use client";
+
 import React from "react";
-import { useTheme } from "../Context/ThemeContext";
-import { SunIcon, MoonIcon } from "./ThemeIcons";
+import { useTheme } from "@/Context/ThemeContext";
+import { SunIcon, MoonIcon } from "@/Components/ThemeIcons";
 
 const ThemeToggle: React.FC = () => {
     const { darkMode, toggleDarkMode } = useTheme();

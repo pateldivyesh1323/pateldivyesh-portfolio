@@ -1,4 +1,4 @@
-import { timeLineData } from "../data";
+import { timeLineData } from "@/data";
 
 export default function Timeline() {
     return (
