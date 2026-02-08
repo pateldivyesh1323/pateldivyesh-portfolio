@@ -1,3 +1,20 @@
+export const PROJECT_TAGS = [
+    "low-level",
+    "full-stack",
+    "ai",
+    "ml",
+    "frontend",
+] as const;
+export type ProjectTag = (typeof PROJECT_TAGS)[number];
+
+export const TAG_LABELS: Record<ProjectTag, string> = {
+    "low-level": "Low-level",
+    "full-stack": "Full-stack",
+    ai: "AI",
+    ml: "ML",
+    frontend: "Frontend",
+};
+
 interface Project {
     name: string;
     techStack: string;
@@ -5,9 +22,29 @@ interface Project {
     link?: string;
     github?: string;
     image: string;
+    tags: ProjectTag[];
 }
 
 const projectsData: Project[] = [
+    {
+        name: "ResearchlyAssist",
+        techStack:
+            "React, MongoDB, NodeJS, ExpressJS, Firebase, GrokAI, RAG, Pinecone",
+        description:
+            "ResearchlyAssist is a paper reading assistant that helps you in reading and summarizing research papers and articles. It has features like chat, note taking, and paper summarization.",
+        image: "/Images/Projects/ResearchlyAssist.png",
+        tags: ["ai", "ml", "full-stack"],
+        github: "https://github.com/pateldivyesh1323/researchlyassist",
+        link: "https://researchlyassist.pateldivyesh.com",
+    },
+    {
+        name: "Bloom filter",
+        techStack: "C++",
+        description: `A Bloom Filter is a space-efficient probabilistic data structure that tells you if an element is "definitely not in a set" or "possibly in a set". It can have false positives but never false negatives.`,
+        image: "/Images/Projects/Bloomfilter.png",
+        tags: ["low-level"],
+        github: "https://github.com/pateldivyesh1323/bloom_filter",
+    },
     {
         name: "Parlo",
         techStack:
@@ -16,6 +53,7 @@ const projectsData: Project[] = [
             "Parlo is an AI-powered platform that breaks language barriers through real-time text and voice translation, enabling seamless global communication with intelligent, context-aware translations.",
         github: "https://github.com/pateldivyesh1323/parlo",
         image: "/Images/Projects/Parlo.png",
+        tags: ["ai", "full-stack"],
     },
     {
         name: "EscalateConvo",
@@ -25,6 +63,7 @@ const projectsData: Project[] = [
             "EscalateConvo is an AI-powered platform that helps you escalate your conversations with your customers by using GeminiAI to generate responses and ElevenLabs to generate voice responses.",
         github: "https://github.com/orgs/EscalateConvo/repositories",
         image: "/Images/Projects/EscalateConvo.png",
+        tags: ["ai", "full-stack"],
     },
     {
         name: "ThreatIQ",
@@ -34,6 +73,7 @@ const projectsData: Project[] = [
             "ThreatIQ is an AI-powered platform that helps you detect and respond to threats in real-time by using CCTV feeds. It uses GroqAI to analyze the stream and detect threats like fire, robbery, violence, suspicious activities, etc.",
         github: "https://github.com/hackventuresorg/threatiq",
         image: "/Images/Projects/ThreatIQ.png",
+        tags: ["ai", "full-stack"],
     },
     {
         name: "FAQSmith",
@@ -44,6 +84,7 @@ const projectsData: Project[] = [
         github: "https://github.com/pateldivyesh1323/FAQSmith",
         image: "/Images/Projects/FAQSmith.png",
         link: "https://faqsmith.vercel.app",
+        tags: ["ai", "ml", "full-stack"],
     },
     {
         name: "Futflare",
@@ -52,6 +93,7 @@ const projectsData: Project[] = [
             "Futflare is a digital time capsule that lets you capture moments, memories, and media to be revealed at a future date of your choosing.",
         github: "https://github.com/pateldivyesh1323/futflare",
         image: "/Images/Projects/Futflare.png",
+        tags: ["full-stack"],
     },
     {
         name: "Edittube",
@@ -62,6 +104,7 @@ const projectsData: Project[] = [
         link: "https://edittube.vercel.app",
         github: "https://github.com/InnoSource-Labs/edittube",
         image: "/Images/Projects/Edittube.png",
+        tags: ["full-stack"],
     },
     {
         name: "Mockinter",
@@ -71,6 +114,7 @@ const projectsData: Project[] = [
         link: "https://mockinter.vercel.app",
         github: "https://github.com/pateldivyesh1323/mockinter",
         image: "/Images/Projects/Mockinter.png",
+        tags: ["full-stack"],
     },
     {
         name: "Passvault",
@@ -80,6 +124,7 @@ const projectsData: Project[] = [
         link: "https://passvault.vercel.app",
         github: "https://github.com/pateldivyesh1323/passvault",
         image: "/Images/Projects/Passvault.png",
+        tags: ["full-stack"],
     },
     {
         name: "Enjoymovies",
@@ -89,6 +134,7 @@ const projectsData: Project[] = [
         link: "https://enjoymovies.netlify.app",
         github: "https://github.com/pateldivyesh1323/enjoymovies",
         image: "/Images/Projects/Enjoymovies.png",
+        tags: ["full-stack"],
     },
     {
         name: "Heatlevels",
@@ -98,6 +144,7 @@ const projectsData: Project[] = [
         link: "https://heatlevels.netlify.app",
         github: "https://github.com/pateldivyesh1323/heatlevels",
         image: "/Images/Projects/Heatlevels.png",
+        tags: ["full-stack"],
     },
     {
         name: "Wonders of world",
@@ -107,6 +154,7 @@ const projectsData: Project[] = [
         link: "https://wondersof-world.web.app/",
         github: "https://github.com/pateldivyesh1323/Wonders-of-World",
         image: "/Images/Projects/Wondersofworld.png",
+        tags: ["frontend"],
     },
 ];
 

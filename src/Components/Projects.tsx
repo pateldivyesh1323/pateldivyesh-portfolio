@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Project, projectsData } from "@/data";
+import { Project, projectsData, TAG_LABELS } from "@/data";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
     return (
@@ -11,7 +11,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                 className="w-full md:w-48 h-48 md:h-32 object-cover"
             />
             <div className="flex-1 w-full">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 md:gap-0 mb-2">
+                <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold text-[#DC2626] text-lg md:text-base">
                         {project.name}
                     </h3>
@@ -20,6 +20,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                             <a
                                 href={project.github}
                                 className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
+                                target="_blank"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -37,6 +38,7 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                             <a
                                 href={project.link}
                                 className="flex items-center gap-1 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
+                                target="_blank"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +58,16 @@ export const ProjectCard = ({ project }: { project: Project }) => {
                             </a>
                         )}
                     </div>
+                </div>
+                <div className="flex flex-wrap gap-1.5 mb-2">
+                    {project.tags.map((tag) => (
+                        <span
+                            key={tag}
+                            className="px-2 py-0.5 rounded text-[10px] md:text-xs font-medium bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300"
+                        >
+                            {TAG_LABELS[tag]}
+                        </span>
+                    ))}
                 </div>
                 <div className="font-semibold text-gray-800 dark:text-neutral-200 mb-2 text-[11px] md:text-xs">
                     {project.techStack}
