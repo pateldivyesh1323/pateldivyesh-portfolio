@@ -6,7 +6,7 @@ const Papershelf = (): React.ReactElement => {
     const featuredPapers = papersData.slice(0, 7);
 
     return (
-        <div className="my-8 md:my-12 px-4 md:px-0">
+        <div className="px-4 md:px-0">
             <div className="flex items-center justify-between gap-4 mb-4">
                 <div>
                     <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">

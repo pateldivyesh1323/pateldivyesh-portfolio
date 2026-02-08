@@ -10,7 +10,7 @@ export default function HomePage() {
     return (
         <div className="relative transition-colors duration-300">
             <div className="absolute top-0 left-0 right-0 h-[300px] bg-[#DC2626] blur-[150px] opacity-20 pointer-events-none"></div>
-            <div className="max-w-3xl mx-auto relative flex flex-col gap-12">
+            <div className="max-w-3xl mx-auto relative flex flex-col gap-32">
                 <Home />
                 <Work />
                 <Projects />

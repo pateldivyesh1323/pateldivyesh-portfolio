@@ -41,7 +41,7 @@ const Contact = (): React.ReactElement => {
     };
 
     return (
-        <div className="flex items-center justify-center flex-col gap-6 md:gap-8 my-8 md:my-12 px-4 md:px-0">
+        <div className="flex items-center justify-center flex-col gap-6 md:gap-8 px-4 md:px-0 mb-8 md:mb-12">
             <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                 Contact
             </h2>

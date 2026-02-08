@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Home = (): React.ReactElement => {
     return (
-        <div className="flex items-start flex-col md:flex-row gap-6 md:gap-8 my-8 md:my-12 px-4 md:px-6 w-full relative">
+        <div className="flex items-start flex-col md:flex-row gap-6 md:gap-8 mt-8 md:mt-12 px-4 md:px-6 w-full relative">
             <div className="absolute top-2 right-2 md:top-0 md:right-0 z-10">
                 <ThemeToggle />
             </div>

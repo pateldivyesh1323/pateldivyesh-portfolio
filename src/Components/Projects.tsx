@@ -4,11 +4,11 @@ import { Project, projectsData, TAG_LABELS } from "@/data";
 
 export const ProjectCard = ({ project }: { project: Project }) => {
     return (
-        <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6 p-3 md:p-2 border border-gray-300 dark:border-gray-700 hover:border-[#DC2626] dark:hover:border-[#DC2626] transition-all duration-300 group bg-white/75 dark:bg-transparent">
+        <div className="flex flex-col md:flex-row gap-4 md:gap-6 p-3 md:p-2 border border-gray-300 dark:border-gray-700 hover:border-[#DC2626] dark:hover:border-[#DC2626] transition-all duration-300 group bg-white/75 dark:bg-transparent items-center">
             <img
                 src={project.image}
                 alt={project.name}
-                className="w-full md:w-48 h-48 md:h-32 object-cover"
+                className="w-full md:w-48 h-38 md:h-36 object-cover"
             />
             <div className="flex-1 w-full">
                 <div className="flex items-center justify-between mb-2">
@@ -85,7 +85,7 @@ const Projects = (): React.ReactElement => {
     const featuredProjects = projectsData.slice(0, 3);
 
     return (
-        <div className="my-8 md:my-12 px-4 md:px-0">
+        <div className="px-4 md:px-0">
             <div className="flex items-center justify-between gap-4 mb-6">
                 <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                     Projects

@@ -72,7 +72,7 @@ const Skills = (): React.ReactElement => {
     ];
 
     return (
-        <div className="flex items-center justify-center flex-col gap-2 my-6 md:my-8 px-4 md:px-0">
+        <div className="flex items-center justify-center flex-col gap-2 px-4 md:px-0">
             <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                 Skills
             </div>

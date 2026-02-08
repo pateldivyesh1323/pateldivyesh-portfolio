@@ -2,7 +2,7 @@ import { timeLineData } from "@/data";
 
 export default function Timeline() {
     return (
-        <div className="flex items-center justify-center flex-col gap-3 my-6 md:my-8 px-4 md:px-0">
+        <div className="flex items-center justify-center flex-col gap-3 px-4 md:px-0">
             <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                 Timeline
             </div>

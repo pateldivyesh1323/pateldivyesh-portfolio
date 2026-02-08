@@ -2,7 +2,7 @@ import { experienceData } from "@/data";
 
 export default function Work() {
     return (
-        <div className="flex items-center justify-center flex-col gap-4 my-8 md:my-12 px-4 md:px-0">
+        <div className="flex items-center justify-center flex-col gap-4 px-4 md:px-0">
             <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
                 Work
             </h2>
