@@ -12,22 +12,8 @@ export default function ProjectsPage() {
                     </h1>
                     <Link
                         href="/"
-                        className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-[#DC2626] dark:hover:text-[#DC2626] transition-colors duration-300 text-sm"
+                        className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
                     >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth={2}
-                            stroke="currentColor"
-                            className="w-4 h-4"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                            />
-                        </svg>
                         Back to Home
                     </Link>
                 </div>

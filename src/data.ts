@@ -174,4 +174,31 @@ const experienceData = [
     },
 ];
 
-export { projectsData, timeLineData, type Project, experienceData };
+interface Paper {
+    title: string;
+    link: string;
+}
+
+const papersData: Paper[] = [
+    {
+        title: "Attention Is All You Need",
+        link: "https://arxiv.org/abs/1706.03762",
+    },
+    {
+        title: "BERT: Pre-training of Deep Bidirectional Transformers",
+        link: "https://arxiv.org/abs/1810.04805",
+    },
+    {
+        title: "Language Models are Unsupervised Multitask Learners",
+        link: "https://openai.com/index/better-language-models/",
+    },
+];
+
+export {
+    projectsData,
+    timeLineData,
+    type Project,
+    experienceData,
+    papersData,
+    type Paper,
+};

@@ -73,35 +73,23 @@ const Projects = (): React.ReactElement => {
     const featuredProjects = projectsData.slice(0, 3);
 
     return (
-        <div className="flex items-center justify-center flex-col gap-6 md:gap-8 my-8 md:my-12 px-4 md:px-0">
-            <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
-                Projects
+        <div className="my-8 md:my-12 px-4 md:px-0">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
+                    Projects
+                </h2>
+                <Link
+                    href="/projects"
+                    className="self-start sm:self-auto text-blue-600 dark:text-blue-400 hover:underline text-sm"
+                >
+                    View All Projects
+                </Link>
             </div>
             <div className="w-full space-y-3 md:space-y-4">
                 {featuredProjects.map((project) => (
                     <ProjectCard key={project.name} project={project} />
                 ))}
             </div>
-            <Link
-                href="/projects"
-                className="px-6 py-2 bg-[#DC2626]/10 hover:bg-[#DC2626]/20 transition-all duration-300 flex items-center gap-2 text-sm"
-            >
-                View All Projects
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={2}
-                    stroke="currentColor"
-                    className="w-4 h-4"
-                >
-                    <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                    />
-                </svg>
-            </Link>
         </div>
     );
 };

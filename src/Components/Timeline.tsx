@@ -29,7 +29,7 @@ export default function Timeline() {
                                         </div>
                                     </div>
                                 </div>
-                            )
+                            ),
                     )}
                 </div>
                 <table className="hidden md:table w-full border-collapse">
@@ -64,7 +64,7 @@ export default function Timeline() {
                                             {item.description}
                                         </td>
                                     </tr>
-                                )
+                                ),
                         )}
                     </tbody>
                 </table>
