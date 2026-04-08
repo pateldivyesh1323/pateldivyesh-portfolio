@@ -160,27 +160,20 @@ const projectsData: Project[] = [
 
 const timeLineData = [
     {
-        date: "October, 2023/2024",
-        event: "Hacktoberfest",
-        description: "Participated in open source contributions",
+        date: "3rd April, 2026 - 5th April, 2026",
+        event: "Innovation Hacks",
+        description: "Participated in hackathon at Arizona State University",
     },
     {
-        date: "November, 2023",
-        event: "MLH November long hackathon",
+        date: "18th March, 2026",
+        event: "DevHacks S3",
         description:
-            "Participated in month-long hackathon building innovative projects",
+            "Participated in hackathon organized by the devlabs team at ASU",
     },
     {
-        date: "9th February, 2024",
-        event: "Jumbled Programming by Silver oak university",
-        description:
-            "Secured runner-up position in competitive programming contest",
-    },
-    {
-        date: "11th April, 2025 - 27th April, 2025",
-        event: "Hackhazards'2025 - The Namespace Community",
-        description:
-            "Participated in hackathon organized by The Namespace Community",
+        date: "December, 2025",
+        event: "AI Partner Catalyst: Accelerate Innovation Hackathon",
+        description: "Participated in hackathon organized by google cloud",
     },
     {
         date: "20th September, 2025",
@@ -189,36 +182,66 @@ const timeLineData = [
             "Participated in hackathon organized but the devlabs team at ASU",
     },
     {
-        date: "December, 2025",
-        event: "AI Partner Catalyst: Accelerate Innovation Hackathon",
-        description: "Participated in hackathon organized by google cloud",
+        date: "11th April, 2025 - 27th April, 2025",
+        event: "Hackhazards'2025 - The Namespace Community",
+        description:
+            "Participated in hackathon organized by The Namespace Community",
+    },
+    {
+        date: "9th February, 2024",
+        event: "Jumbled Programming by Silver oak university",
+        description:
+            "Secured runner-up position in competitive programming contest",
+    },
+    {
+        date: "November, 2023",
+        event: "MLH November long hackathon",
+        description:
+            "Participated in month-long hackathon building innovative projects",
+    },
+    {
+        date: "October, 2023/2024",
+        event: "Hacktoberfest",
+        description: "Participated in open source contributions",
     },
 ];
 
 const experienceData = [
     {
-        role: "Full-Stack Developer Intern",
-        company: "RealList AI",
-        location: "Remote",
-        duration: "December 2024 - June 2025",
-        description:
-            "Developed over 15 core features for property management using the MERN stack and AWS, including a marketplace and an AI support bot. I also updated database queries and added caching to improve system speed and handle higher traffic.",
+        role: "Web Assistant",
+        company: "Arizona State University (Knowledge Enterprises)",
+        location: "Tempe, AZ, USA",
+        duration: "April 2026 - Present",
     },
     {
-        role: "Software Engineer Intern",
-        company: "Caring Click",
-        location: "Ahmedabad, India",
-        duration: "March 2024 - August 2024",
-        description:
-            "Built the company’s main platform using NextJS and Firebase to support financial guidance for over 500 monthly users. I also integrated the payment system and managed cloud deployment to keep the site stable and available.",
+        role: "Student Researcher",
+        company: "Arizona State University",
+        location: "Tempe, AZ, USA",
+        duration: "January 2026 - Present",
+    },
+    {
+        role: "Software Engineering Volunteer",
+        company: "Arizona State University",
+        location: "Tempe, AZ, USA",
+        duration: "January 2026 - February 2026",
     },
     {
         role: "Project Mentor",
         company: "Software development association at ASU",
         location: "Tempe, AZ, USA",
         duration: "October 2025 - November 2025",
-        description:
-            "Guided students in building an AI-powered document assistant that summarizes academic papers and explains complex concepts. I provided technical direction on integrating AI models for text analysis and structuring the React-based frontend for a responsive user experience.",
+    },
+    {
+        role: "Full-Stack Developer Intern",
+        company: "RealList AI",
+        location: "Remote",
+        duration: "December 2024 - June 2025",
+    },
+    {
+        role: "Software Engineer Intern",
+        company: "Caring Click",
+        location: "Ahmedabad, India",
+        duration: "March 2024 - August 2024",
     },
 ];
 
