@@ -2,6 +2,7 @@ import React from "react";
 import { papersData } from "@/data";
 import SectionHeaderRow from "./SectionHeaderRow";
 import { PaperLinkRow, ViewAllLink } from "./PaperLinkRow";
+import { StaggerContainer, StaggerItem } from "./animations/Stagger";
 
 const Papershelf = (): React.ReactElement => {
     const featuredPapers = papersData.slice(0, 7);
@@ -16,15 +17,13 @@ const Papershelf = (): React.ReactElement => {
                     <ViewAllLink href="/papershelf" label="View All Papers →" />
                 }
             />
-            <div className="flex flex-col gap-2">
+            <StaggerContainer className="flex flex-col gap-2">
                 {featuredPapers.map((paper) => (
-                    <PaperLinkRow
-                        key={paper.title}
-                        title={paper.title}
-                        link={paper.link}
-                    />
+                    <StaggerItem key={paper.title}>
+                        <PaperLinkRow title={paper.title} link={paper.link} />
+                    </StaggerItem>
                 ))}
-            </div>
+            </StaggerContainer>
         </div>
     );
 };

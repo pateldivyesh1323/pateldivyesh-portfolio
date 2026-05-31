@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { motion } from "motion/react";
 import ThemeToggle from "./ThemeToggle";
 import { btnPrimary } from "@/lib/ui";
 
@@ -18,11 +19,16 @@ const Navbar = (): React.ReactElement => {
     const [open, setOpen] = useState(false);
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 glass-nav">
+        <motion.header
+            className="fixed top-0 left-0 right-0 z-50 glass-nav"
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.45, ease: [0.21, 0.47, 0.32, 0.98] }}
+        >
             <nav className="max-w-5xl mx-auto px-6 h-14 md:h-16 flex items-center justify-between gap-4">
                 <Link
                     href="/"
-                    className="font-display font-semibold text-text shrink-0 hover:opacity-70 transition-opacity"
+                    className="font-display font-semibold text-text shrink-0 hover:text-accent transition-colors"
                 >
                     Divyesh Patel
                 </Link>
@@ -31,7 +37,7 @@ const Navbar = (): React.ReactElement => {
                         <a
                             key={link.href}
                             href={link.href}
-                            className="hover:text-text transition-colors"
+                            className="hover:text-accent transition-colors"
                         >
                             {link.label}
                         </a>
@@ -48,7 +54,7 @@ const Navbar = (): React.ReactElement => {
                     </a>
                     <button
                         type="button"
-                        className="lg:hidden p-2 text-text rounded-full hover:bg-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-muted"
+                        className="lg:hidden p-2 text-text rounded-full hover:bg-accent-soft transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         onClick={() => setOpen(!open)}
                         aria-label="Toggle menu"
                         aria-expanded={open}
@@ -79,13 +85,18 @@ const Navbar = (): React.ReactElement => {
                 </div>
             </nav>
             {open && (
-                <div className="lg:hidden border-t border-border bg-bg px-6 py-4 flex flex-col gap-3">
+                <motion.div
+                    className="lg:hidden border-t border-border bg-bg px-6 py-4 flex flex-col gap-3"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    transition={{ duration: 0.25 }}
+                >
                     {navLinks.map((link) => (
                         <a
                             key={link.href}
                             href={link.href}
                             onClick={() => setOpen(false)}
-                            className="text-sm text-muted hover:text-text transition-colors"
+                            className="text-sm text-muted hover:text-accent transition-colors"
                         >
                             {link.label}
                         </a>
@@ -97,9 +108,9 @@ const Navbar = (): React.ReactElement => {
                     >
                         Resume
                     </a>
-                </div>
+                </motion.div>
             )}
-        </header>
+        </motion.header>
     );
 };
 

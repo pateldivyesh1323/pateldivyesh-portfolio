@@ -7,6 +7,7 @@ import Papershelf from "@/Components/Papershelf";
 import Timeline from "@/Components/Timeline";
 import Skills from "@/Components/Skills";
 import Contact from "@/Components/Contact";
+import FadeIn from "@/Components/animations/FadeIn";
 
 export default function HomePage() {
     return (
@@ -14,25 +15,39 @@ export default function HomePage() {
             <Navbar />
             <main className="max-w-5xl mx-auto px-6 pt-20 md:pt-24 relative z-10 flex flex-col gap-24 md:gap-32">
                 <Home />
-                <section id="work">
-                    <Work />
-                </section>
-                <section id="projects">
-                    <Projects />
-                </section>
-                <section id="papershelf">
-                    <Papershelf />
-                </section>
-                <section id="timeline">
-                    <Timeline />
-                </section>
-                <section id="skills">
-                    <Skills />
-                </section>
-                <section id="contact">
-                    <Contact />
-                </section>
-                <Footer />
+                <FadeIn>
+                    <section id="work">
+                        <Work />
+                    </section>
+                </FadeIn>
+                <FadeIn delay={0.05}>
+                    <section id="projects">
+                        <Projects />
+                    </section>
+                </FadeIn>
+                <FadeIn delay={0.05}>
+                    <section id="papershelf">
+                        <Papershelf />
+                    </section>
+                </FadeIn>
+                <FadeIn delay={0.05}>
+                    <section id="timeline">
+                        <Timeline />
+                    </section>
+                </FadeIn>
+                <FadeIn delay={0.05}>
+                    <section id="skills">
+                        <Skills />
+                    </section>
+                </FadeIn>
+                <FadeIn delay={0.05}>
+                    <section id="contact">
+                        <Contact />
+                    </section>
+                </FadeIn>
+                <FadeIn>
+                    <Footer />
+                </FadeIn>
             </main>
         </div>
     );

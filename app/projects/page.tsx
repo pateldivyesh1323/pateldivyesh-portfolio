@@ -6,6 +6,7 @@ import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
 import SectionHeaderRow from "@/Components/SectionHeaderRow";
 import { ProjectCard } from "@/Components/ProjectCard";
+import FadeIn from "@/Components/animations/FadeIn";
 import {
     projectsData,
     PROJECT_TAGS,
@@ -28,52 +29,56 @@ export default function ProjectsPage() {
         <div className="relative transition-colors duration-300 min-h-screen">
             <Navbar />
             <main className="max-w-5xl mx-auto px-6 pt-20 md:pt-24 pb-12 relative z-10">
-                <SectionHeaderRow
-                    eyebrow="Portfolio"
-                    title="All Projects"
-                    action={
-                        <Link href="/" className={`shrink-0 ${btnGhost}`}>
-                            ← Back to Home
-                        </Link>
-                    }
-                />
-                <div className="flex flex-wrap gap-2 mb-8">
-                    <button
-                        onClick={() => setSelectedTag("all")}
-                        className={
-                            selectedTag === "all"
-                                ? pillFilterActive
-                                : pillFilterInactive
+                <FadeIn>
+                    <SectionHeaderRow
+                        eyebrow="Portfolio"
+                        title="All Projects"
+                        action={
+                            <Link href="/" className={`shrink-0 ${btnGhost}`}>
+                                ← Back to Home
+                            </Link>
                         }
-                    >
-                        All
-                    </button>
-                    {PROJECT_TAGS.map((tag) => (
+                    />
+                </FadeIn>
+                <FadeIn delay={0.1}>
+                    <div className="flex flex-wrap gap-2 mb-8">
                         <button
-                            key={tag}
-                            onClick={() => setSelectedTag(tag)}
+                            onClick={() => setSelectedTag("all")}
                             className={
-                                selectedTag === tag
+                                selectedTag === "all"
                                     ? pillFilterActive
                                     : pillFilterInactive
                             }
                         >
-                            {TAG_LABELS[tag]}
+                            All
                         </button>
-                    ))}
-                </div>
+                        {PROJECT_TAGS.map((tag) => (
+                            <button
+                                key={tag}
+                                onClick={() => setSelectedTag(tag)}
+                                className={
+                                    selectedTag === tag
+                                        ? pillFilterActive
+                                        : pillFilterInactive
+                                }
+                            >
+                                {TAG_LABELS[tag]}
+                            </button>
+                        ))}
+                    </div>
+                </FadeIn>
                 <div className="flex flex-col gap-6">
-                    {filteredProjects.map((project) => (
-                        <ProjectCard
-                            key={project.name}
-                            project={project}
-                            layout="list"
-                        />
+                    {filteredProjects.map((project, index) => (
+                        <FadeIn key={project.name} delay={index * 0.04}>
+                            <ProjectCard project={project} layout="list" />
+                        </FadeIn>
                     ))}
                 </div>
-                <div className="mt-16">
-                    <Footer />
-                </div>
+                <FadeIn>
+                    <div className="mt-16">
+                        <Footer />
+                    </div>
+                </FadeIn>
             </main>
         </div>
     );

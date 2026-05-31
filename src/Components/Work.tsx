@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import { motion } from "motion/react";
 import { experienceData } from "@/data";
 import { cardSurface } from "@/lib/ui";
 import SectionHeader from "./SectionHeader";
@@ -24,12 +25,17 @@ export default function Work() {
                     <span className="section-eyebrow">Now</span>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {current.map((exp, index) => (
-                            <div
+                            <motion.div
                                 key={index}
-                                className={`group ${cardSurface} p-5 transition-all duration-300 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/20`}
+                                className={`group ${cardSurface} p-5`}
+                                whileHover={{
+                                    y: -3,
+                                    boxShadow: "0 12px 40px -12px rgba(99, 102, 241, 0.25)",
+                                }}
+                                transition={{ duration: 0.25 }}
                             >
                                 <div className="flex items-start justify-between gap-2">
-                                    <h3 className="font-semibold text-text text-sm md:text-base">
+                                    <h3 className="font-semibold text-text text-sm md:text-base group-hover:text-accent transition-colors">
                                         {exp.role}
                                     </h3>
                                     <span className="relative flex h-2 w-2 shrink-0 mt-1.5">
@@ -43,7 +49,7 @@ export default function Work() {
                                 <p className="text-xs text-muted mt-1">
                                     {exp.location} · {exp.duration}
                                 </p>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
@@ -54,10 +60,10 @@ export default function Work() {
                         {past.map((exp, index) => (
                             <div
                                 key={index}
-                                className="group flex items-baseline justify-between gap-4 py-4 px-5 border-b border-border last:border-0 transition-colors duration-200 hover:bg-bg"
+                                className="group flex items-baseline justify-between gap-4 py-4 px-5 border-b border-border last:border-0 transition-colors duration-200 hover:bg-accent-soft/40"
                             >
                                 <div className="min-w-0">
-                                    <span className="text-sm font-medium text-text">
+                                    <span className="text-sm font-medium text-text group-hover:text-accent transition-colors">
                                         {exp.role}
                                     </span>
                                     <span className="text-xs text-muted ml-2">

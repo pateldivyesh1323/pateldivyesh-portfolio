@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import { motion } from "motion/react";
 import Socials from "./Socials";
 import { btnSecondary } from "@/lib/ui";
 
@@ -10,18 +11,38 @@ const Home = (): React.ReactElement => {
         <section className="min-h-[85vh] flex items-center py-12 md:py-16">
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
                 <div className="order-2 md:order-1">
-                    <p className="section-eyebrow mb-4">
+                    <motion.p
+                        className="section-eyebrow mb-4"
+                        initial={{ opacity: 0, y: 16 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                    >
                         Software Developer · Arizona, USA
-                    </p>
-                    <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-text tracking-tight leading-[1.05]">
-                        Divyesh Patel
-                    </h1>
-                    <p className="mt-4 text-base md:text-lg text-muted leading-relaxed max-w-md">
+                    </motion.p>
+                    <motion.h1
+                        className="font-display text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]"
+                        initial={{ opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
+                        <span className="text-gradient">Divyesh Patel</span>
+                    </motion.h1>
+                    <motion.p
+                        className="mt-4 text-base md:text-lg text-muted leading-relaxed max-w-md"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.35 }}
+                    >
                         22, Software Developer
                         <br />
                         Arizona, USA
-                    </p>
-                    <div className="flex flex-wrap items-center gap-3 mt-8">
+                    </motion.p>
+                    <motion.div
+                        className="flex flex-wrap items-center gap-3 mt-8"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                    >
                         <Socials />
                         <a
                             href="/pateldivyesh.pdf"
@@ -40,10 +61,19 @@ const Home = (): React.ReactElement => {
                             </svg>
                             Download Resume
                         </a>
-                    </div>
+                    </motion.div>
                 </div>
-                <div className="order-1 md:order-2 flex justify-center md:justify-end">
-                    <div className="relative w-[220px] h-[280px] md:w-[280px] md:h-[340px] rounded-2xl overflow-hidden shadow-xl shadow-black/10 dark:shadow-black/40 bg-surface">
+                <motion.div
+                    className="order-1 md:order-2 flex justify-center md:justify-end"
+                    initial={{ opacity: 0, scale: 0.92, y: 20 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{
+                        duration: 0.7,
+                        delay: 0.25,
+                        ease: [0.21, 0.47, 0.32, 0.98],
+                    }}
+                >
+                    <div className="relative w-[220px] h-[280px] md:w-[280px] md:h-[340px] rounded-2xl overflow-hidden shadow-xl shadow-accent/20 bg-surface ring-1 ring-accent/20">
                         <Image
                             className="w-full h-full object-cover"
                             src="/Images/PatelDivyesh-square.jpg"
@@ -56,7 +86,7 @@ const Home = (): React.ReactElement => {
                             priority
                         />
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     );

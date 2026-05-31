@@ -59,7 +59,7 @@ const Contact = (): React.ReactElement => {
                     <div className="space-y-4">
                         <a
                             href="mailto:pateldivyesh1323@gmail.com"
-                            className="block text-sm text-text hover:opacity-70 transition-opacity"
+                            className="block text-sm text-text hover:text-accent transition-colors"
                         >
                             pateldivyesh1323@gmail.com
                         </a>

@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
+import { motion } from "motion/react";
 import { Project, TAG_LABELS } from "@/data";
-import { cardSurface, pillTag } from "@/lib/ui";
+import { cardSurface, linkAccent, pillTag } from "@/lib/ui";
 
 type ProjectCardProps = {
     project: Project;
@@ -14,10 +17,12 @@ export const ProjectCard = ({
     const isList = layout === "list";
 
     return (
-        <article
-            className={`group flex flex-col overflow-hidden ${cardSurface} transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/20 ${
+        <motion.article
+            className={`group flex flex-col overflow-hidden ${cardSurface} ${
                 isList ? "md:flex-row" : ""
             }`}
+            whileHover={{ y: -4 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
         >
             <div
                 className={`overflow-hidden bg-border ${
@@ -29,21 +34,21 @@ export const ProjectCard = ({
                 <img
                     src={project.image}
                     alt={project.name}
-                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02] ${
+                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
                         isList ? "md:h-full md:min-h-[180px]" : ""
                     }`}
                 />
             </div>
             <div className="flex flex-1 flex-col p-5 md:p-6">
                 <div className="flex items-start justify-between gap-3 mb-2">
-                    <h3 className="font-display font-semibold text-lg text-text">
+                    <h3 className="font-display font-semibold text-lg text-text group-hover:text-accent transition-colors duration-300">
                         {project.name}
                     </h3>
                     <div className="flex gap-3 shrink-0">
                         {project.github && (
                             <a
                                 href={project.github}
-                                className="flex items-center gap-1 text-xs text-muted hover:text-text transition-colors duration-300"
+                                className={`flex items-center gap-1 ${linkAccent}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -62,7 +67,7 @@ export const ProjectCard = ({
                         {project.link && (
                             <a
                                 href={project.link}
-                                className="flex items-center gap-1 text-xs text-muted hover:text-text transition-colors duration-300"
+                                className={`flex items-center gap-1 ${linkAccent}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -99,6 +104,6 @@ export const ProjectCard = ({
                     {project.description}
                 </p>
             </div>
-        </article>
+        </motion.article>
     );
 };
