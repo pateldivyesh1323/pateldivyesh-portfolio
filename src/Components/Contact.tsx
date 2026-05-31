@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Socials from "./Socials";
 import toast from "react-hot-toast";
 import SectionHeader from "./SectionHeader";
+import { btnPrimary, cardSurface, inputField } from "@/lib/ui";
 
 const Contact = (): React.ReactElement => {
     const [name, setName] = useState<string>("");
@@ -50,7 +51,7 @@ const Contact = (): React.ReactElement => {
             />
             <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
                 <div className="w-full lg:w-2/5 space-y-6">
-                    <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                    <p className="text-sm text-muted leading-relaxed">
                         &quot;I believe in creating software that not only works
                         flawlessly but also makes a positive impact. Let&apos;s
                         collaborate and build something amazing together.&quot;
@@ -58,7 +59,7 @@ const Contact = (): React.ReactElement => {
                     <div className="space-y-4">
                         <a
                             href="mailto:pateldivyesh1323@gmail.com"
-                            className="block text-sm text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                            className="block text-sm text-text hover:opacity-70 transition-opacity"
                         >
                             pateldivyesh1323@gmail.com
                         </a>
@@ -68,7 +69,7 @@ const Contact = (): React.ReactElement => {
                 <div className="w-full lg:w-3/5">
                     <form
                         onSubmit={handleSubmit}
-                        className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 md:p-8 space-y-4"
+                        className={`${cardSurface} p-6 md:p-8 space-y-4`}
                     >
                         <input
                             value={name}
@@ -77,7 +78,7 @@ const Contact = (): React.ReactElement => {
                             type="text"
                             name="name"
                             placeholder="Name"
-                            className="w-full px-4 py-2.5 text-sm rounded-lg bg-[var(--color-bg)] text-[var(--color-text)] border border-[var(--color-border)] focus:outline-none focus:ring-2 focus:ring-[var(--color-muted)] transition-all duration-300"
+                            className={inputField}
                         />
                         <input
                             value={email}
@@ -86,7 +87,7 @@ const Contact = (): React.ReactElement => {
                             type="email"
                             name="email"
                             placeholder="Email"
-                            className="w-full px-4 py-2.5 text-sm rounded-lg bg-[var(--color-bg)] text-[var(--color-text)] border border-[var(--color-border)] focus:outline-none focus:ring-2 focus:ring-[var(--color-muted)] transition-all duration-300"
+                            className={inputField}
                         />
                         <textarea
                             value={message}
@@ -95,12 +96,12 @@ const Contact = (): React.ReactElement => {
                             rows={4}
                             name="message"
                             placeholder="Message"
-                            className="w-full px-4 py-2.5 text-sm rounded-lg bg-[var(--color-bg)] text-[var(--color-text)] border border-[var(--color-border)] focus:outline-none focus:ring-2 focus:ring-[var(--color-muted)] transition-all duration-300 resize-none"
+                            className={`${inputField} resize-none`}
                         />
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full py-2.5 text-sm font-medium rounded-lg bg-[var(--color-accent)] text-[var(--color-bg)] hover:opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-muted)]"
+                            className={`w-full ${btnPrimary}`}
                         >
                             {isLoading ? (
                                 <>

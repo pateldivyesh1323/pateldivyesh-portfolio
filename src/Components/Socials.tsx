@@ -1,4 +1,5 @@
 import React from "react";
+import { iconButton } from "@/lib/ui";
 
 const socialLinks = [
     {
@@ -33,7 +34,7 @@ const Socials = (): React.ReactElement => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="flex items-center justify-center w-10 h-10 rounded-full border border-[var(--color-border)] text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-muted)]"
+                    className={`w-10 h-10 ${iconButton}`}
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

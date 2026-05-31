@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
-import SectionHeader from "@/Components/SectionHeader";
+import SectionHeaderRow from "@/Components/SectionHeaderRow";
 import { ProjectCard } from "@/Components/ProjectCard";
 import {
     projectsData,
@@ -12,6 +12,7 @@ import {
     TAG_LABELS,
     type ProjectTag,
 } from "@/data";
+import { btnGhost, pillFilterActive, pillFilterInactive } from "@/lib/ui";
 
 export default function ProjectsPage() {
     const [selectedTag, setSelectedTag] = useState<ProjectTag | "all">("all");
@@ -26,27 +27,24 @@ export default function ProjectsPage() {
     return (
         <div className="relative transition-colors duration-300 min-h-screen">
             <Navbar />
-            <main className="max-w-5xl mx-auto px-6 pt-20 md:pt-24 pb-12">
-                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
-                    <SectionHeader
-                        eyebrow="Portfolio"
-                        title="All Projects"
-                    />
-                    <Link
-                        href="/"
-                        className="shrink-0 text-sm font-medium text-[var(--color-text)] hover:opacity-70 transition-opacity sm:mb-2"
-                    >
-                        ← Back to Home
-                    </Link>
-                </div>
+            <main className="max-w-5xl mx-auto px-6 pt-20 md:pt-24 pb-12 relative z-10">
+                <SectionHeaderRow
+                    eyebrow="Portfolio"
+                    title="All Projects"
+                    action={
+                        <Link href="/" className={`shrink-0 ${btnGhost}`}>
+                            ← Back to Home
+                        </Link>
+                    }
+                />
                 <div className="flex flex-wrap gap-2 mb-8">
                     <button
                         onClick={() => setSelectedTag("all")}
-                        className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-muted)] ${
+                        className={
                             selectedTag === "all"
-                                ? "bg-[var(--color-accent)] text-[var(--color-bg)]"
-                                : "bg-[var(--color-surface)] text-[var(--color-muted)] border border-[var(--color-border)] hover:text-[var(--color-text)]"
-                        }`}
+                                ? pillFilterActive
+                                : pillFilterInactive
+                        }
                     >
                         All
                     </button>
@@ -54,11 +52,11 @@ export default function ProjectsPage() {
                         <button
                             key={tag}
                             onClick={() => setSelectedTag(tag)}
-                            className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-muted)] ${
+                            className={
                                 selectedTag === tag
-                                    ? "bg-[var(--color-accent)] text-[var(--color-bg)]"
-                                    : "bg-[var(--color-surface)] text-[var(--color-muted)] border border-[var(--color-border)] hover:text-[var(--color-text)]"
-                            }`}
+                                    ? pillFilterActive
+                                    : pillFilterInactive
+                            }
                         >
                             {TAG_LABELS[tag]}
                         </button>

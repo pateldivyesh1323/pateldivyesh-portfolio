@@ -1,5 +1,6 @@
 import React from "react";
 import { Project, TAG_LABELS } from "@/data";
+import { cardSurface, pillTag } from "@/lib/ui";
 
 type ProjectCardProps = {
     project: Project;
@@ -14,12 +15,12 @@ export const ProjectCard = ({
 
     return (
         <article
-            className={`group flex flex-col overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/20 ${
+            className={`group flex flex-col overflow-hidden ${cardSurface} transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/5 dark:hover:shadow-black/20 ${
                 isList ? "md:flex-row" : ""
             }`}
         >
             <div
-                className={`overflow-hidden bg-[var(--color-border)] ${
+                className={`overflow-hidden bg-border ${
                     isList
                         ? "md:w-72 md:shrink-0 aspect-video md:aspect-auto md:min-h-[180px]"
                         : "aspect-video w-full"
@@ -35,14 +36,14 @@ export const ProjectCard = ({
             </div>
             <div className="flex flex-1 flex-col p-5 md:p-6">
                 <div className="flex items-start justify-between gap-3 mb-2">
-                    <h3 className="font-display font-semibold text-lg text-[var(--color-text)]">
+                    <h3 className="font-display font-semibold text-lg text-text">
                         {project.name}
                     </h3>
                     <div className="flex gap-3 shrink-0">
                         {project.github && (
                             <a
                                 href={project.github}
-                                className="flex items-center gap-1 text-xs text-[var(--color-muted)] hover:text-[var(--color-text)] transition-colors duration-300"
+                                className="flex items-center gap-1 text-xs text-muted hover:text-text transition-colors duration-300"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -61,7 +62,7 @@ export const ProjectCard = ({
                         {project.link && (
                             <a
                                 href={project.link}
-                                className="flex items-center gap-1 text-xs text-[var(--color-muted)] hover:text-[var(--color-text)] transition-colors duration-300"
+                                className="flex items-center gap-1 text-xs text-muted hover:text-text transition-colors duration-300"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -86,18 +87,15 @@ export const ProjectCard = ({
                 </div>
                 <div className="flex flex-wrap gap-1.5 mb-3">
                     {project.tags.map((tag) => (
-                        <span
-                            key={tag}
-                            className="px-2.5 py-0.5 rounded-full text-[10px] md:text-xs font-medium bg-[var(--color-bg)] text-[var(--color-muted)] border border-[var(--color-border)]"
-                        >
+                        <span key={tag} className={pillTag}>
                             {TAG_LABELS[tag]}
                         </span>
                     ))}
                 </div>
-                <p className="text-xs font-medium text-[var(--color-muted)] mb-2">
+                <p className="text-xs font-medium text-muted mb-2">
                     {project.techStack}
                 </p>
-                <p className="text-sm text-[var(--color-muted)] leading-relaxed flex-1">
+                <p className="text-sm text-muted leading-relaxed flex-1">
                     {project.description}
                 </p>
             </div>

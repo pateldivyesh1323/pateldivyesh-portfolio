@@ -12,7 +12,7 @@ export default function HomePage() {
     return (
         <div className="relative transition-colors duration-300 min-h-screen">
             <Navbar />
-            <main className="max-w-5xl mx-auto px-6 pt-20 md:pt-24 relative flex flex-col gap-24 md:gap-32">
+            <main className="max-w-5xl mx-auto px-6 pt-20 md:pt-24 relative z-10 flex flex-col gap-24 md:gap-32">
                 <Home />
                 <section id="work">
                     <Work />

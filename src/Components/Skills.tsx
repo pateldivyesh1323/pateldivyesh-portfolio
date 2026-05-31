@@ -1,4 +1,5 @@
 import React from "react";
+import { cardSurface, pillTag } from "@/lib/ui";
 import SectionHeader from "./SectionHeader";
 
 const skillsData = {
@@ -79,17 +80,14 @@ const Skills = (): React.ReactElement => {
                 {categories.map((category, idx) => (
                     <div
                         key={idx}
-                        className="rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] p-5 transition-all duration-200"
+                        className={`${cardSurface} p-5 transition-all duration-300`}
                     >
-                        <h3 className="font-display font-semibold text-sm text-[var(--color-text)] mb-3">
+                        <h3 className="font-display font-semibold text-sm text-text mb-3">
                             {category.title}
                         </h3>
                         <div className="flex flex-wrap gap-2">
                             {category.skills.map((skill) => (
-                                <span
-                                    key={skill.name}
-                                    className="inline-block px-3 py-1 text-xs rounded-full bg-[var(--color-bg)] text-[var(--color-muted)] border border-[var(--color-border)]"
-                                >
+                                <span key={skill.name} className={pillTag}>
                                     {skill.name}
                                 </span>
                             ))}

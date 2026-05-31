@@ -3,11 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import ThemeToggle from "./ThemeToggle";
+import { btnPrimary } from "@/lib/ui";
 
 const navLinks = [
     { href: "/#work", label: "Work" },
     { href: "/projects", label: "Projects" },
-    { href: "/#papershelf", label: "Papershelf" },
+    { href: "/papershelf", label: "Papershelf" },
     { href: "/#timeline", label: "Timeline" },
     { href: "/#skills", label: "Skills" },
     { href: "/#contact", label: "Contact" },
@@ -21,16 +22,16 @@ const Navbar = (): React.ReactElement => {
             <nav className="max-w-5xl mx-auto px-6 h-14 md:h-16 flex items-center justify-between gap-4">
                 <Link
                     href="/"
-                    className="font-display font-semibold text-[var(--color-text)] shrink-0 hover:opacity-70 transition-opacity"
+                    className="font-display font-semibold text-text shrink-0 hover:opacity-70 transition-opacity"
                 >
                     Divyesh Patel
                 </Link>
-                <div className="hidden lg:flex items-center gap-6 text-sm text-[var(--color-muted)]">
+                <div className="hidden lg:flex items-center gap-6 text-sm text-muted">
                     {navLinks.map((link) => (
                         <a
                             key={link.href}
                             href={link.href}
-                            className="hover:text-[var(--color-text)] transition-colors"
+                            className="hover:text-text transition-colors"
                         >
                             {link.label}
                         </a>
@@ -41,13 +42,13 @@ const Navbar = (): React.ReactElement => {
                     <a
                         href="/pateldivyesh.pdf"
                         download="pateldivyesh.pdf"
-                        className="hidden sm:inline-flex items-center px-4 py-1.5 text-xs font-medium rounded-full bg-[var(--color-accent)] text-[var(--color-bg)] hover:opacity-90 transition-opacity"
+                        className={`hidden sm:inline-flex ${btnPrimary}`}
                     >
                         Resume
                     </a>
                     <button
                         type="button"
-                        className="lg:hidden p-2 text-[var(--color-text)]"
+                        className="lg:hidden p-2 text-text rounded-full hover:bg-surface transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-muted"
                         onClick={() => setOpen(!open)}
                         aria-label="Toggle menu"
                         aria-expanded={open}
@@ -78,13 +79,13 @@ const Navbar = (): React.ReactElement => {
                 </div>
             </nav>
             {open && (
-                <div className="lg:hidden border-t border-[var(--color-border)] bg-[var(--color-bg)] px-6 py-4 flex flex-col gap-3">
+                <div className="lg:hidden border-t border-border bg-bg px-6 py-4 flex flex-col gap-3">
                     {navLinks.map((link) => (
                         <a
                             key={link.href}
                             href={link.href}
                             onClick={() => setOpen(false)}
-                            className="text-sm text-[var(--color-muted)] hover:text-[var(--color-text)] transition-colors"
+                            className="text-sm text-muted hover:text-text transition-colors"
                         >
                             {link.label}
                         </a>
@@ -92,7 +93,7 @@ const Navbar = (): React.ReactElement => {
                     <a
                         href="/pateldivyesh.pdf"
                         download="pateldivyesh.pdf"
-                        className="sm:hidden inline-flex items-center justify-center px-4 py-2 text-xs font-medium rounded-full bg-[var(--color-accent)] text-[var(--color-bg)]"
+                        className={`sm:hidden ${btnPrimary}`}
                     >
                         Resume
                     </a>

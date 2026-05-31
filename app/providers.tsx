@@ -7,7 +7,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     return (
         <ThemeProvider>
             <Toaster />
-            <div className="grain-overlay" aria-hidden="true" />
+            <div className="grain-overlay pointer-events-none" aria-hidden="true" />
             {children}
         </ThemeProvider>
     );
