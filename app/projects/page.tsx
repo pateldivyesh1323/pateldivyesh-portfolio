@@ -28,7 +28,7 @@ export default function ProjectsPage() {
     return (
         <div className="relative transition-colors duration-300 min-h-screen">
             <Navbar />
-            <main className="max-w-5xl mx-auto px-6 pt-20 md:pt-24 pb-12 relative z-10">
+            <main className="max-w-4xl mx-auto px-6 pt-20 md:pt-24 pb-12 relative z-10">
                 <FadeIn>
                     <SectionHeaderRow
                         eyebrow="Portfolio"

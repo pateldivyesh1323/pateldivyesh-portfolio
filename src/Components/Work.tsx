@@ -1,10 +1,10 @@
 "use client";
 
 import { useMemo } from "react";
-import { motion } from "motion/react";
 import { experienceData } from "@/data";
 import { cardSurface } from "@/lib/ui";
 import SectionHeader from "./SectionHeader";
+import SpotlightCard from "./animations/SpotlightCard";
 
 export default function Work() {
     const { current, past } = useMemo(() => {
@@ -25,17 +25,9 @@ export default function Work() {
                     <span className="section-eyebrow">Now</span>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {current.map((exp, index) => (
-                            <motion.div
-                                key={index}
-                                className={`group ${cardSurface} p-5`}
-                                whileHover={{
-                                    y: -3,
-                                    boxShadow: "0 12px 40px -12px rgba(99, 102, 241, 0.25)",
-                                }}
-                                transition={{ duration: 0.25 }}
-                            >
+                            <SpotlightCard key={index} className="p-5">
                                 <div className="flex items-start justify-between gap-2">
-                                    <h3 className="font-semibold text-text text-sm md:text-base group-hover:text-accent transition-colors">
+                                    <h3 className="font-display font-medium text-text text-sm md:text-base group-hover:text-accent transition-colors">
                                         {exp.role}
                                     </h3>
                                     <span className="relative flex h-2 w-2 shrink-0 mt-1.5">
@@ -49,7 +41,7 @@ export default function Work() {
                                 <p className="text-xs text-muted mt-1">
                                     {exp.location} · {exp.duration}
                                 </p>
-                            </motion.div>
+                            </SpotlightCard>
                         ))}
                     </div>
                 </div>

@@ -6,7 +6,7 @@ const Footer = (): React.ReactElement => {
         <footer className="border-t border-border pt-10 pb-8">
             <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
                 <div className="text-center sm:text-left">
-                    <p className="font-display font-semibold text-text">
+                    <p className="font-display font-medium text-text">
                         Divyesh Patel
                     </p>
                     <p className="text-xs text-muted mt-1">

@@ -1,6 +1,7 @@
 import React from "react";
-import { cardSurface, pillTag } from "@/lib/ui";
+import { pillTag } from "@/lib/ui";
 import SectionHeader from "./SectionHeader";
+import SpotlightCard from "./animations/SpotlightCard";
 
 const skillsData = {
     webDevelopment: [
@@ -78,21 +79,27 @@ const Skills = (): React.ReactElement => {
             <SectionHeader eyebrow="Expertise" title="Skills" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {categories.map((category, idx) => (
-                    <div
-                        key={idx}
-                        className={`${cardSurface} p-5 transition-all duration-300`}
-                    >
-                        <h3 className="font-display font-semibold text-sm text-text mb-3">
+                    <SpotlightCard key={idx} className="p-5">
+                        <h3 className="font-display font-medium text-sm text-text mb-3">
                             {category.title}
                         </h3>
                         <div className="flex flex-wrap gap-2">
                             {category.skills.map((skill) => (
-                                <span key={skill.name} className={pillTag}>
+                                <span
+                                    key={skill.name}
+                                    className={`${pillTag} inline-flex items-center gap-1.5`}
+                                >
+                                    {skill.icon && (
+                                        <i
+                                            className={`${skill.icon} colored text-sm`}
+                                            aria-hidden
+                                        />
+                                    )}
                                     {skill.name}
                                 </span>
                             ))}
                         </div>
-                    </div>
+                    </SpotlightCard>
                 ))}
             </div>
         </div>

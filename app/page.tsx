@@ -13,7 +13,7 @@ export default function HomePage() {
     return (
         <div className="relative transition-colors duration-300 min-h-screen">
             <Navbar />
-            <main className="max-w-5xl mx-auto px-6 pt-20 md:pt-24 relative z-10 flex flex-col gap-24 md:gap-32">
+            <main className="max-w-4xl mx-auto px-6 pt-20 md:pt-24 relative z-10 flex flex-col gap-16 md:gap-20">
                 <Home />
                 <FadeIn>
                     <section id="work">

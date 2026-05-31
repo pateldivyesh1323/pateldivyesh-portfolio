@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import { motion } from "motion/react";
 import { Project, TAG_LABELS } from "@/data";
-import { cardSurface, linkAccent, pillTag } from "@/lib/ui";
+import { linkAccent, pillTag } from "@/lib/ui";
+import SpotlightCard from "./animations/SpotlightCard";
 
 type ProjectCardProps = {
     project: Project;
@@ -17,12 +17,8 @@ export const ProjectCard = ({
     const isList = layout === "list";
 
     return (
-        <motion.article
-            className={`group flex flex-col overflow-hidden ${cardSurface} ${
-                isList ? "md:flex-row" : ""
-            }`}
-            whileHover={{ y: -4 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
+        <SpotlightCard
+            className={`flex flex-col ${isList ? "md:flex-row" : ""}`}
         >
             <div
                 className={`overflow-hidden bg-border ${
@@ -41,7 +37,7 @@ export const ProjectCard = ({
             </div>
             <div className="flex flex-1 flex-col p-5 md:p-6">
                 <div className="flex items-start justify-between gap-3 mb-2">
-                    <h3 className="font-display font-semibold text-lg text-text group-hover:text-accent transition-colors duration-300">
+                    <h3 className="font-display font-medium text-lg text-text group-hover:text-accent transition-colors duration-300">
                         {project.name}
                     </h3>
                     <div className="flex gap-3 shrink-0">
@@ -104,6 +100,6 @@ export const ProjectCard = ({
                     {project.description}
                 </p>
             </div>
-        </motion.article>
+        </SpotlightCard>
     );
 };

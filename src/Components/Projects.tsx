@@ -20,7 +20,7 @@ const Projects = (): React.ReactElement => {
                     <ViewAllLink href="/projects" label="View All Projects →" />
                 }
             />
-            <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-5">
                 {featuredProjects.map((project) => (
                     <StaggerItem key={project.name}>
                         <ProjectCard project={project} />

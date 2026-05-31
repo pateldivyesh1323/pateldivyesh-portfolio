@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import ThemeToggle from "./ThemeToggle";
+import Magnetic from "./animations/Magnetic";
 import { btnPrimary } from "@/lib/ui";
 
 const navLinks = [
@@ -25,10 +26,10 @@ const Navbar = (): React.ReactElement => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.45, ease: [0.21, 0.47, 0.32, 0.98] }}
         >
-            <nav className="max-w-5xl mx-auto px-6 h-14 md:h-16 flex items-center justify-between gap-4">
+            <nav className="max-w-4xl mx-auto px-6 h-14 md:h-16 flex items-center justify-between gap-4">
                 <Link
                     href="/"
-                    className="font-display font-semibold text-text shrink-0 hover:text-accent transition-colors"
+                    className="font-display font-medium text-text shrink-0 hover:text-gradient transition-colors"
                 >
                     Divyesh Patel
                 </Link>
@@ -37,21 +38,24 @@ const Navbar = (): React.ReactElement => {
                         <a
                             key={link.href}
                             href={link.href}
-                            className="hover:text-accent transition-colors"
+                            className="group relative hover:text-accent transition-colors"
                         >
                             {link.label}
+                            <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-gradient-to-r from-accent to-accent-muted transition-all duration-300 group-hover:w-full" />
                         </a>
                     ))}
                 </div>
                 <div className="flex items-center gap-2 md:gap-3 shrink-0">
                     <ThemeToggle />
-                    <a
-                        href="/pateldivyesh.pdf"
-                        download="pateldivyesh.pdf"
-                        className={`hidden sm:inline-flex ${btnPrimary}`}
-                    >
-                        Resume
-                    </a>
+                    <Magnetic className="hidden sm:inline-flex">
+                        <a
+                            href="/pateldivyesh.pdf"
+                            download="pateldivyesh.pdf"
+                            className={btnPrimary}
+                        >
+                            Resume
+                        </a>
+                    </Magnetic>
                     <button
                         type="button"
                         className="lg:hidden p-2 text-text rounded-full hover:bg-accent-soft transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
