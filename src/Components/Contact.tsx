@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Socials from "./Socials";
 import toast from "react-hot-toast";
+import SectionHeader from "./SectionHeader";
 
 const Contact = (): React.ReactElement => {
     const [name, setName] = useState<string>("");
@@ -41,33 +42,33 @@ const Contact = (): React.ReactElement => {
     };
 
     return (
-        <div className="flex items-center justify-center flex-col gap-6 md:gap-8 px-4 md:px-0 mb-8 md:mb-12">
-            <h2 className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
-                Contact
-            </h2>
-            <div className="w-full flex flex-col md:flex-row items-start justify-between gap-6 md:gap-12">
-                <div className="w-full md:w-2/5 space-y-4 md:space-y-6">
-                    <p className="text-gray-600 dark:text-gray-300 text-xs md:text-sm leading-relaxed">
-                        "I believe in creating software that not only works
-                        flawlessly but also makes a positive impact. Let's
-                        collaborate and build something amazing together."
+        <div className="w-full pb-4">
+            <SectionHeader
+                eyebrow="Get in touch"
+                title="Contact"
+                subtitle="Let's collaborate and build something amazing together."
+            />
+            <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
+                <div className="w-full lg:w-2/5 space-y-6">
+                    <p className="text-sm text-[var(--color-muted)] leading-relaxed">
+                        &quot;I believe in creating software that not only works
+                        flawlessly but also makes a positive impact. Let&apos;s
+                        collaborate and build something amazing together.&quot;
                     </p>
-                    <div className="space-y-3 md:space-y-4">
+                    <div className="space-y-4">
                         <a
                             href="mailto:pateldivyesh1323@gmail.com"
-                            className="block text-xs md:text-sm text-gray-600 dark:text-gray-300 hover:text-[#DC2626] transition-colors duration-300"
+                            className="block text-sm text-[var(--color-text)] hover:opacity-70 transition-opacity"
                         >
                             pateldivyesh1323@gmail.com
                         </a>
-                        <div className="md:mt-4">
-                            <Socials />
-                        </div>
+                        <Socials />
                     </div>
                 </div>
-                <div className="w-full md:w-3/5">
+                <div className="w-full lg:w-3/5">
                     <form
                         onSubmit={handleSubmit}
-                        className="space-y-3 md:space-y-4"
+                        className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 md:p-8 space-y-4"
                     >
                         <input
                             value={name}
@@ -76,7 +77,7 @@ const Contact = (): React.ReactElement => {
                             type="text"
                             name="name"
                             placeholder="Name"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-[#DC2626] transition-all duration-300"
+                            className="w-full px-4 py-2.5 text-sm rounded-lg bg-[var(--color-bg)] text-[var(--color-text)] border border-[var(--color-border)] focus:outline-none focus:ring-2 focus:ring-[var(--color-muted)] transition-all duration-300"
                         />
                         <input
                             value={email}
@@ -85,7 +86,7 @@ const Contact = (): React.ReactElement => {
                             type="email"
                             name="email"
                             placeholder="Email"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-[#DC2626] transition-all duration-300"
+                            className="w-full px-4 py-2.5 text-sm rounded-lg bg-[var(--color-bg)] text-[var(--color-text)] border border-[var(--color-border)] focus:outline-none focus:ring-2 focus:ring-[var(--color-muted)] transition-all duration-300"
                         />
                         <textarea
                             value={message}
@@ -94,12 +95,12 @@ const Contact = (): React.ReactElement => {
                             rows={4}
                             name="message"
                             placeholder="Message"
-                            className="w-full px-3 md:px-4 py-1.5 md:py-2 text-sm bg-white dark:bg-neutral-950 text-gray-800 dark:text-white border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-1 focus:ring-[#DC2626] transition-all duration-300"
+                            className="w-full px-4 py-2.5 text-sm rounded-lg bg-[var(--color-bg)] text-[var(--color-text)] border border-[var(--color-border)] focus:outline-none focus:ring-2 focus:ring-[var(--color-muted)] transition-all duration-300 resize-none"
                         />
                         <button
                             type="submit"
                             disabled={isLoading}
-                            className="w-full py-1.5 md:py-2 text-sm bg-[#DC2626] text-black font-semibold hover:bg-[#DC2626]/90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                            className="w-full py-2.5 text-sm font-medium rounded-lg bg-[var(--color-accent)] text-[var(--color-bg)] hover:opacity-90 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-muted)]"
                         >
                             {isLoading ? (
                                 <>

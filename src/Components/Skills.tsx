@@ -1,4 +1,5 @@
 import React from "react";
+import SectionHeader from "./SectionHeader";
 
 const skillsData = {
     webDevelopment: [
@@ -72,33 +73,29 @@ const Skills = (): React.ReactElement => {
     ];
 
     return (
-        <div className="flex items-center justify-center flex-col gap-2 px-4 md:px-0">
-            <div className="font-bold text-base md:text-lg text-gray-900 dark:text-white">
-                Skills
-            </div>
-            <div className="w-full overflow-x-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
-                    {categories.map((category, idx) => (
-                        <div
-                            key={idx}
-                            className="bg-white/60 dark:bg-gray-800/40 p-2.5 md:p-3 border border-gray-200 dark:border-gray-700 transition-all duration-200"
-                        >
-                            <h3 className="text-[#DC2626] font-semibold mb-2 text-[10px] md:text-xs">
-                                {category.title}
-                            </h3>
-                            <div className="flex flex-wrap gap-1 md:gap-1.5">
-                                {category.skills.map((skill) => (
-                                    <span
-                                        key={skill.name}
-                                        className="inline-block px-1.5 md:px-2 py-0.5 text-[9px] md:text-[10px] bg-gray-100 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300"
-                                    >
-                                        {skill.name}
-                                    </span>
-                                ))}
-                            </div>
+        <div className="w-full">
+            <SectionHeader eyebrow="Expertise" title="Skills" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {categories.map((category, idx) => (
+                    <div
+                        key={idx}
+                        className="rounded-2xl bg-[var(--color-surface)] border border-[var(--color-border)] p-5 transition-all duration-200"
+                    >
+                        <h3 className="font-display font-semibold text-sm text-[var(--color-text)] mb-3">
+                            {category.title}
+                        </h3>
+                        <div className="flex flex-wrap gap-2">
+                            {category.skills.map((skill) => (
+                                <span
+                                    key={skill.name}
+                                    className="inline-block px-3 py-1 text-xs rounded-full bg-[var(--color-bg)] text-[var(--color-muted)] border border-[var(--color-border)]"
+                                >
+                                    {skill.name}
+                                </span>
+                            ))}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
         </div>
     );

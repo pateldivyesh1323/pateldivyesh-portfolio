@@ -10,7 +10,7 @@ const ThemeToggle: React.FC = () => {
     return (
         <button
             onClick={toggleDarkMode}
-            className={`p-2 transition-all duration-300`}
+            className="p-2 rounded-full border border-[var(--color-border)] text-[var(--color-text)] hover:bg-[var(--color-surface)] transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-muted)]"
             aria-label={
                 darkMode ? "Switch to light mode" : "Switch to dark mode"
             }
