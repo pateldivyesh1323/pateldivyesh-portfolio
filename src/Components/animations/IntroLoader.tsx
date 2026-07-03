@@ -56,7 +56,7 @@ const IntroLoader = (): React.ReactElement | null => {
         <>
             <motion.div
                 aria-hidden
-                className="fixed inset-0 z-190 bg-accent"
+                className="intro-overlay fixed inset-0 z-190 bg-accent"
                 initial={false}
                 animate={phase === "exit" ? { y: "-100%" } : { y: 0 }}
                 transition={{ duration: 0.65, delay: 0.14, ease: EXIT_EASE }}
@@ -69,7 +69,7 @@ const IntroLoader = (): React.ReactElement | null => {
             />
 
             <motion.div
-                className="fixed inset-0 z-200 bg-bg flex items-center justify-center"
+                className="intro-overlay fixed inset-0 z-200 bg-bg flex items-center justify-center"
                 initial={false}
                 animate={phase === "exit" ? { y: "-100%" } : { y: 0 }}
                 transition={{ duration: 0.65, ease: EXIT_EASE }}
