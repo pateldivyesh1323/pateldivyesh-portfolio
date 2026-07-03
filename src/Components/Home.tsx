@@ -136,16 +136,17 @@ const Home = (): React.ReactElement => {
                                     priority
                                 />
                             </div>
-                            {/* Perforation + barcode strip */}
-                            <div className="flex items-center justify-between gap-3 border-t border-dashed border-ink/30 mt-2 px-1 py-2">
-                                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">
+                            {/* Perforation + barcode strip — width pinned to
+                                the photo so it can never stretch the frame */}
+                            <div className="flex w-[200px] md:w-[250px] items-center justify-between gap-3 overflow-hidden border-t border-dashed border-ink/30 mt-2 px-1 py-2">
+                                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted whitespace-nowrap">
                                     Admit One
                                 </span>
                                 <span
                                     className="flex items-end gap-[2px] h-4 text-ink"
                                     aria-hidden
                                 >
-                                    {BARCODE_BARS.map((w, i) => (
+                                    {BARCODE_BARS.slice(0, 14).map((w, i) => (
                                         <span
                                             key={i}
                                             className="h-full bg-current"
@@ -153,7 +154,7 @@ const Home = (): React.ReactElement => {
                                         />
                                     ))}
                                 </span>
-                                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-accent">
+                                <span className="hidden md:inline font-mono text-[10px] uppercase tracking-[0.2em] text-accent whitespace-nowrap">
                                     N°1323
                                 </span>
                             </div>

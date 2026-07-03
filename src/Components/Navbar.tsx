@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import ThemeToggle from "./ThemeToggle";
 import Magnetic from "./animations/Magnetic";
 import { btnPrimary } from "@/lib/ui";
@@ -89,35 +89,52 @@ const Navbar = (): React.ReactElement => {
                     </button>
                 </div>
             </nav>
-            {open && (
-                <motion.div
-                    className="lg:hidden border-t border-ink/15 bg-bg px-6 py-4 flex flex-col gap-3"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    transition={{ duration: 0.25 }}
-                >
-                    {navLinks.map((link, index) => (
-                        <a
-                            key={link.href}
-                            href={link.href}
-                            onClick={() => setOpen(false)}
-                            className="font-mono text-xs font-medium uppercase tracking-[0.14em] text-muted hover:text-accent transition-colors"
-                        >
-                            <span className="text-accent mr-2">
-                                {String(index + 1).padStart(2, "0")}
-                            </span>
-                            {link.label}
-                        </a>
-                    ))}
-                    <a
-                        href="/pateldivyesh.pdf"
-                        download="pateldivyesh.pdf"
-                        className={`sm:hidden ${btnPrimary}`}
+            <AnimatePresence>
+                {open && (
+                    <motion.div
+                        className="lg:hidden overflow-hidden border-t border-ink/15 bg-bg"
+                        initial={{ height: 0 }}
+                        animate={{ height: "auto" }}
+                        exit={{ height: 0 }}
+                        transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
                     >
-                        Resume
-                    </a>
-                </motion.div>
-            )}
+                        {/* Links fade in only after the panel has opened */}
+                        <motion.div
+                            className="px-6 py-4 flex flex-col gap-3"
+                            initial={{ opacity: 0 }}
+                            animate={{
+                                opacity: 1,
+                                transition: { delay: 0.22, duration: 0.2 },
+                            }}
+                            exit={{
+                                opacity: 0,
+                                transition: { duration: 0.1 },
+                            }}
+                        >
+                            {navLinks.map((link, index) => (
+                                <a
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setOpen(false)}
+                                    className="font-mono text-xs font-medium uppercase tracking-[0.14em] text-muted hover:text-accent transition-colors"
+                                >
+                                    <span className="text-accent mr-2">
+                                        {String(index + 1).padStart(2, "0")}
+                                    </span>
+                                    {link.label}
+                                </a>
+                            ))}
+                            <a
+                                href="/pateldivyesh.pdf"
+                                download="pateldivyesh.pdf"
+                                className={`sm:hidden ${btnPrimary}`}
+                            >
+                                Resume
+                            </a>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </motion.header>
     );
 };
