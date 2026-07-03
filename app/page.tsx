@@ -10,11 +10,13 @@ import Contact from "@/Components/Contact";
 import FadeIn from "@/Components/animations/FadeIn";
 import Reveal from "@/Components/animations/Reveal";
 import Marquee from "@/Components/animations/Marquee";
+import IntroLoader from "@/Components/animations/IntroLoader";
 import HeroBackdrop from "@/Components/HeroBackdrop";
 
 export default function HomePage() {
     return (
         <div className="relative transition-colors duration-300 min-h-screen overflow-x-clip">
+            <IntroLoader />
             <HeroBackdrop />
             <Navbar />
             <main className="max-w-4xl mx-auto px-6 pt-20 md:pt-24 relative z-10 flex flex-col gap-16 md:gap-20">
@@ -22,9 +24,10 @@ export default function HomePage() {
                 <Marquee
                     items={[
                         "Full-Stack Apps",
-                        "ML-Powered Tools",
+                        "AI Powered Tools",
                         "Delightful UIs",
-                        "Open Source",
+                        "Low-level Systems",
+                        "Distributed Systems",
                         "Cool Stuff",
                     ]}
                     className="-mx-6 md:mx-0"

@@ -57,10 +57,11 @@ const Home = (): React.ReactElement => {
                         <span className="text-accent">&gt;</span> I build{" "}
                         <Typewriter
                             words={[
-                                "full-stack apps",
-                                "ML-powered tools",
-                                "delightful UIs",
-                                "cool stuff",
+                                "AI Powered Tools",
+                                "Full-Stack Apps",
+                                "Low-level Systems",
+                                "Delightful UIs",
+                                "Cool Stuff",
                             ]}
                         />
                     </motion.p>

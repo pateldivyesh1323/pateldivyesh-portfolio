@@ -208,16 +208,22 @@ const timeLineData = [
 
 const experienceData = [
     {
+        role: "GTM AI Intern",
+        company: "Nextiva",
+        location: "Scottsdale, AZ, USA",
+        duration: "July 2026 - Present",
+    },
+    {
         role: "Web Assistant",
         company: "Arizona State University (Knowledge Enterprises)",
         location: "Tempe, AZ, USA",
-        duration: "April 2026 - Present",
+        duration: "April 2026 - June 2026",
     },
     {
         role: "Student Researcher",
         company: "Arizona State University",
         location: "Tempe, AZ, USA",
-        duration: "January 2026 - Present",
+        duration: "January 2026 - May 2026",
     },
     {
         role: "Software Engineering Volunteer",
