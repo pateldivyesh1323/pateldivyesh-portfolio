@@ -21,23 +21,23 @@ export const ProjectCard = ({
             className={`flex flex-col ${isList ? "md:flex-row" : ""}`}
         >
             <div
-                className={`overflow-hidden bg-border ${
+                className={`overflow-hidden bg-accent-soft border-ink/10 border-b ${
                     isList
-                        ? "md:w-72 md:shrink-0 aspect-video md:aspect-auto md:min-h-[180px]"
+                        ? "md:w-72 md:shrink-0 aspect-video md:aspect-auto md:min-h-[180px] md:border-b-0 md:border-r"
                         : "aspect-video w-full"
                 }`}
             >
                 <img
                     src={project.image}
                     alt={project.name}
-                    className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
+                    className={`w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105 ${
                         isList ? "md:h-full md:min-h-[180px]" : ""
                     }`}
                 />
             </div>
             <div className="flex flex-1 flex-col p-5 md:p-6">
                 <div className="flex items-start justify-between gap-3 mb-2">
-                    <h3 className="font-display font-medium text-lg text-text group-hover:text-accent transition-colors duration-300">
+                    <h3 className="font-display uppercase tracking-tight text-xl md:text-2xl leading-none text-text group-hover:text-accent transition-colors duration-300">
                         {project.name}
                     </h3>
                     <div className="flex gap-3 shrink-0">
@@ -93,7 +93,7 @@ export const ProjectCard = ({
                         </span>
                     ))}
                 </div>
-                <p className="text-xs font-medium text-muted mb-2">
+                <p className="font-mono text-[11px] text-muted mb-2">
                     {project.techStack}
                 </p>
                 <p className="text-sm text-muted leading-relaxed flex-1">

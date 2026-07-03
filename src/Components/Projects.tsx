@@ -15,6 +15,7 @@ const Projects = (): React.ReactElement => {
             <SectionHeaderRow
                 eyebrow="Selected Work"
                 title="Projects"
+                no="02"
                 subtitle="A few things I've built recently."
                 action={
                     <ViewAllLink href="/projects" label="View All Projects →" />

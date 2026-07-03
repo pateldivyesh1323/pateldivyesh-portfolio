@@ -29,11 +29,12 @@ const Navbar = (): React.ReactElement => {
             <nav className="max-w-4xl mx-auto px-6 h-14 md:h-16 flex items-center justify-between gap-4">
                 <Link
                     href="/"
-                    className="font-display font-medium text-text shrink-0 hover:text-gradient transition-colors"
+                    className="font-display uppercase text-xl md:text-2xl tracking-tight text-text shrink-0 hover:text-accent transition-colors"
                 >
                     Divyesh Patel
+                    <span className="text-accent">©</span>
                 </Link>
-                <div className="hidden lg:flex items-center gap-6 text-sm text-muted">
+                <div className="hidden lg:flex items-center gap-5 font-mono text-[11px] font-medium uppercase tracking-[0.14em] text-muted">
                     {navLinks.map((link) => (
                         <a
                             key={link.href}
@@ -41,7 +42,7 @@ const Navbar = (): React.ReactElement => {
                             className="group relative hover:text-accent transition-colors"
                         >
                             {link.label}
-                            <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-gradient-to-r from-accent to-accent-muted transition-all duration-300 group-hover:w-full" />
+                            <span className="absolute -bottom-1 left-0 h-[2px] w-0 bg-accent transition-all duration-200 group-hover:w-full" />
                         </a>
                     ))}
                 </div>
@@ -58,7 +59,7 @@ const Navbar = (): React.ReactElement => {
                     </Magnetic>
                     <button
                         type="button"
-                        className="lg:hidden p-2 text-text rounded-full hover:bg-accent-soft transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+                        className="lg:hidden p-2 text-text rounded-[3px] hover:text-accent transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                         onClick={() => setOpen(!open)}
                         aria-label="Toggle menu"
                         aria-expanded={open}
@@ -67,7 +68,7 @@ const Navbar = (): React.ReactElement => {
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            strokeWidth={1.5}
+                            strokeWidth={2}
                             stroke="currentColor"
                             className="w-5 h-5"
                         >
@@ -90,18 +91,21 @@ const Navbar = (): React.ReactElement => {
             </nav>
             {open && (
                 <motion.div
-                    className="lg:hidden border-t border-border bg-bg px-6 py-4 flex flex-col gap-3"
+                    className="lg:hidden border-t border-ink/15 bg-bg px-6 py-4 flex flex-col gap-3"
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     transition={{ duration: 0.25 }}
                 >
-                    {navLinks.map((link) => (
+                    {navLinks.map((link, index) => (
                         <a
                             key={link.href}
                             href={link.href}
                             onClick={() => setOpen(false)}
-                            className="text-sm text-muted hover:text-accent transition-colors"
+                            className="font-mono text-xs font-medium uppercase tracking-[0.14em] text-muted hover:text-accent transition-colors"
                         >
+                            <span className="text-accent mr-2">
+                                {String(index + 1).padStart(2, "0")}
+                            </span>
                             {link.label}
                         </a>
                     ))}

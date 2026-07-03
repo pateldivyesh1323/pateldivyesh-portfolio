@@ -36,7 +36,7 @@ export const PaperLinkRow = ({
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between gap-4 px-5 py-4 rounded-2xl border border-border bg-surface hover:bg-accent-soft/50 hover:border-accent/25 transition-all duration-300"
+            className="group flex items-center justify-between gap-4 px-1 py-4 border-b border-ink/15 hover:border-accent/60 transition-colors duration-200"
             whileHover={{ x: 4 }}
             transition={{ duration: 0.2 }}
         >

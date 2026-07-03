@@ -8,43 +8,68 @@ import Timeline from "@/Components/Timeline";
 import Skills from "@/Components/Skills";
 import Contact from "@/Components/Contact";
 import FadeIn from "@/Components/animations/FadeIn";
+import Reveal from "@/Components/animations/Reveal";
+import Marquee from "@/Components/animations/Marquee";
+import HeroBackdrop from "@/Components/HeroBackdrop";
 
 export default function HomePage() {
     return (
-        <div className="relative transition-colors duration-300 min-h-screen">
+        <div className="relative transition-colors duration-300 min-h-screen overflow-x-clip">
+            <HeroBackdrop />
             <Navbar />
             <main className="max-w-4xl mx-auto px-6 pt-20 md:pt-24 relative z-10 flex flex-col gap-16 md:gap-20">
                 <Home />
-                <FadeIn>
+                <Marquee
+                    items={[
+                        "Full-Stack Apps",
+                        "ML-Powered Tools",
+                        "Delightful UIs",
+                        "Open Source",
+                        "Cool Stuff",
+                    ]}
+                    className="-mx-6 md:mx-0"
+                />
+                <Reveal>
                     <section id="work">
                         <Work />
                     </section>
-                </FadeIn>
-                <FadeIn delay={0.05}>
+                </Reveal>
+                <Reveal>
                     <section id="projects">
                         <Projects />
                     </section>
-                </FadeIn>
-                <FadeIn delay={0.05}>
+                </Reveal>
+                <Reveal>
                     <section id="papershelf">
                         <Papershelf />
                     </section>
-                </FadeIn>
-                <FadeIn delay={0.05}>
+                </Reveal>
+                <Reveal>
                     <section id="timeline">
                         <Timeline />
                     </section>
-                </FadeIn>
-                <FadeIn delay={0.05}>
+                </Reveal>
+                <Reveal>
                     <section id="skills">
                         <Skills />
                     </section>
-                </FadeIn>
-                <FadeIn delay={0.05}>
+                </Reveal>
+                <Marquee
+                    items={[
+                        "Let's Work Together",
+                        "Say Hello",
+                        "Let's Work Together",
+                        "Say Hello",
+                    ]}
+                    variant="outline"
+                    duration={26}
+                    className="-mx-6 md:mx-0"
+                />
+                <Reveal>
                     <section id="contact">
                         <Contact />
                     </section>
-                </FadeIn>
+                </Reveal>
                 <FadeIn>
                     <Footer />
                 </FadeIn>

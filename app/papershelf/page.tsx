@@ -24,7 +24,7 @@ export default function PapershelfPage() {
                         }
                     />
                 </FadeIn>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col">
                     {papersData.map((paper, index) => (
                         <FadeIn key={paper.title} delay={index * 0.06}>
                             <PaperLinkRow

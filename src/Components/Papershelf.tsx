@@ -12,12 +12,13 @@ const Papershelf = (): React.ReactElement => {
             <SectionHeaderRow
                 eyebrow="Reading"
                 title="Papershelf"
+                no="03"
                 subtitle="Papers I've read"
                 action={
                     <ViewAllLink href="/papershelf" label="View All Papers →" />
                 }
             />
-            <StaggerContainer className="flex flex-col gap-2">
+            <StaggerContainer className="flex flex-col">
                 {featuredPapers.map((paper) => (
                     <StaggerItem key={paper.title}>
                         <PaperLinkRow title={paper.title} link={paper.link} />

@@ -76,25 +76,16 @@ const Skills = (): React.ReactElement => {
 
     return (
         <div className="w-full">
-            <SectionHeader eyebrow="Expertise" title="Skills" />
+            <SectionHeader eyebrow="Expertise" title="Skills" no="05" />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {categories.map((category, idx) => (
                     <SpotlightCard key={idx} className="p-5">
-                        <h3 className="font-display font-medium text-sm text-text mb-3">
+                        <h3 className="font-display uppercase tracking-tight text-lg text-text leading-none mb-3">
                             {category.title}
                         </h3>
                         <div className="flex flex-wrap gap-2">
                             {category.skills.map((skill) => (
-                                <span
-                                    key={skill.name}
-                                    className={`${pillTag} inline-flex items-center gap-1.5`}
-                                >
-                                    {skill.icon && (
-                                        <i
-                                            className={`${skill.icon} colored text-sm`}
-                                            aria-hidden
-                                        />
-                                    )}
+                                <span key={skill.name} className={pillTag}>
                                     {skill.name}
                                 </span>
                             ))}

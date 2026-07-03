@@ -13,15 +13,16 @@ type SpotlightCardProps = {
 };
 
 /**
- * A glass card that grows a gradient border on hover and follows the cursor
- * with a soft warm spotlight. Overlays are absolutely positioned and
- * pointer-events-none, so they never disturb the consumer's layout.
+ * A flat poster card with a hard ink frame. On hover it lifts slightly, the
+ * frame turns red, and a spotlight follows the cursor. Overlays are
+ * absolutely positioned and pointer-events-none, so they never disturb the
+ * consumer's layout.
  */
 const SpotlightCard = ({
     children,
     className = "",
     lift = 3,
-    intensity = 11,
+    intensity = 9,
 }: SpotlightCardProps): React.ReactElement => {
     const ref = useRef<HTMLDivElement>(null);
     const [pos, setPos] = useState({ x: -200, y: -200 });
@@ -41,26 +42,11 @@ const SpotlightCard = ({
             onMouseLeave={() => setHover(false)}
             whileHover={{ y: -lift }}
             transition={{ type: "spring", stiffness: 280, damping: 22 }}
-            className={`group relative overflow-hidden rounded-2xl border border-border bg-surface/80 backdrop-blur-sm ${className}`}
+            className={`group relative overflow-hidden rounded-lg bg-surface border border-ink/10 hover:border-accent/50 transition-colors duration-200 ${className}`}
         >
             {children}
 
-            {/* Gradient border that fades in on hover */}
-            <div
-                aria-hidden
-                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                style={{
-                    padding: "1px",
-                    background:
-                        "linear-gradient(130deg, var(--color-highlight), var(--color-accent), var(--color-accent-muted), var(--color-accent-2))",
-                    WebkitMask:
-                        "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-                    WebkitMaskComposite: "xor",
-                    maskComposite: "exclude",
-                }}
-            />
-
-            {/* Cursor-following spotlight */}
+            {/* Cursor-following red spotlight */}
             <div
                 aria-hidden
                 className="pointer-events-none absolute inset-0 transition-opacity duration-300"

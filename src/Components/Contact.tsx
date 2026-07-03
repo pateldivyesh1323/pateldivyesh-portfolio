@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Socials from "./Socials";
 import toast from "react-hot-toast";
 import SectionHeader from "./SectionHeader";
-import { btnPrimary, cardSurface, inputField } from "@/lib/ui";
+import { btnPrimary, inputField } from "@/lib/ui";
 
 const Contact = (): React.ReactElement => {
     const [name, setName] = useState<string>("");
@@ -47,11 +47,12 @@ const Contact = (): React.ReactElement => {
             <SectionHeader
                 eyebrow="Get in touch"
                 title="Contact"
+                no="06"
                 subtitle="Let's collaborate and build something amazing together."
             />
             <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-10 lg:gap-16">
                 <div className="w-full lg:w-2/5 space-y-6">
-                    <p className="text-sm text-muted leading-relaxed">
+                    <p className="text-sm text-muted leading-relaxed border-l-2 border-accent pl-4">
                         &quot;I believe in creating software that not only works
                         flawlessly but also makes a positive impact. Let&apos;s
                         collaborate and build something amazing together.&quot;
@@ -59,7 +60,7 @@ const Contact = (): React.ReactElement => {
                     <div className="space-y-4">
                         <a
                             href="mailto:pateldivyesh1323@gmail.com"
-                            className="block text-sm text-text hover:text-accent transition-colors"
+                            className="block font-mono text-sm text-text underline decoration-2 underline-offset-4 decoration-accent/40 hover:text-accent hover:decoration-accent transition-colors"
                         >
                             pateldivyesh1323@gmail.com
                         </a>
@@ -67,10 +68,7 @@ const Contact = (): React.ReactElement => {
                     </div>
                 </div>
                 <div className="w-full lg:w-3/5">
-                    <form
-                        onSubmit={handleSubmit}
-                        className={`${cardSurface} p-6 md:p-8 space-y-4`}
-                    >
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <input
                             value={name}
                             onChange={(e) => setName(e.target.value)}
