@@ -12,7 +12,7 @@
     --color-bg: #f3ede0;
     --color-surface: #faf5e9;
     --color-text: #171210;
-    --color-muted: #6d6357;
+    --color-muted: #5c5348;
     --color-border: #171210;
     --color-ink: #171210;
     --color-accent: #8e1309; /* oxblood */
@@ -89,9 +89,9 @@
 }
 
 @utility glass-nav {
-    background: color-mix(in srgb, var(--color-bg) 90%, transparent);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: color-mix(in srgb, var(--color-bg) 98%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid
         color-mix(in srgb, var(--color-ink) 15%, transparent);
 }

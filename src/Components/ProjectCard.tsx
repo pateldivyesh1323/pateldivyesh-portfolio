@@ -36,8 +36,8 @@ export const ProjectCard = ({
                 />
             </div>
             <div className="flex flex-1 flex-col p-5 md:p-6">
-                <div className="flex items-start justify-between gap-3 mb-2">
-                    <h3 className="font-display uppercase tracking-tight text-xl md:text-2xl leading-none text-text group-hover:text-accent transition-colors duration-300">
+                <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1.5 mb-2">
+                    <h3 className="font-display uppercase tracking-tight text-xl md:text-2xl leading-none text-text group-hover:text-accent transition-colors duration-300 min-w-0 break-words">
                         {project.name}
                     </h3>
                     <div className="flex gap-3 shrink-0">
